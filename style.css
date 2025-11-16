@@ -77,19 +77,33 @@ header h1 {
   background: #ddd;
   border-radius: 10px;
   overflow: hidden;
-  text-align: center;
-  font-size: 12px;
-  line-height: 20px;
-  color: #fff;
+  position: relative; /* importante per testo sopra la barra */
 }
+
 .progress-bar {
   height: 100%;
   background: #4caf50; /* verde Pokémon per progressi */
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Testo sempre centrato sopra la barra */
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 12px;
   font-weight: bold;
+  color: #000; /* nero per essere visibile sopra qualsiasi barra */
+  pointer-events: none; /* non interferisce con click */
 }
+
 
 /* ===== Set page - carte ===== */
 .cards-container {
