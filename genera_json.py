@@ -1,63 +1,51 @@
 import pandas as pd
 import json
-import os
 
-# Percorsi dei file Excel (si trovano nella cartella principale)
-SET_FILE = "sets_template.xlsx"
-CARD_FILE = "cards_template.xlsx"
+# --- File Excel ---
+SETS_FILE = 'sets_template.xlsx'
+CARDS_FILE = 'cards_template.xlsx'
 
-# Output JSON
-SETS_JSON = "sets.json"
-CARDS_JSON = "cards.json"
+# --- File JSON di destinazione ---
+SETS_JSON = 'sets.json'
+CARDS_JSON = 'cards.json'
 
-def genera_sets_json():
-    try:
-        df = pd.read_excel(SET_FILE)
+# --- 1. Leggi Sets ---
+df_sets = pd.read_excel(SETS_FILE)
 
-        # Verifica colonne attese
-        colonne_attese = ["ID", "Nome_Set", "Totale_Carte", "Era", "Tipo", "Nome_Logo"]
-        for col in colonne_attese:
-            if col not in df.columns:
-                raise ValueError(f"Colonna mancante nel file sets_template.xlsx: {col}")
+# Assicuriamoci che ID e Totale_Carte siano numeri
+df_sets['ID'] = df_sets['ID'].astype(int)
+df_sets['Totale_Carte'] = df_sets['Totale_Carte'].astype(int)
 
-        data = df.to_dict(orient="records")
+# Converti DataFrame in lista di dizionari
+sets_list = df_sets.to_dict(orient='records')
 
-        with open(SETS_JSON, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+# Scrivi sets.json
+with open(SETS_JSON, 'w', encoding='utf-8') as f:
+    json.dump(sets_list, f, ensure_ascii=False, indent=2)
 
-        print(f"[OK] File {SETS_JSON} generato.")
+print(f"Generato {SETS_JSON} con {len(sets_list)} set.")
 
-    except Exception as e:
-        print(f"Errore durante la generazione di {SETS_JSON}: {e}")
+# --- 2. Leggi Cards ---
+df_cards = pd.read_excel(CARDS_FILE)
 
+# Assicuriamoci che ID_Set e Numero_Carta siano numeri
+df_cards['ID_Set'] = df_cards['ID_Set'].astype(int)
+df_cards['Numero_Carta'] = df_cards['Numero_Carta'].astype(int)
 
-def genera_cards_json():
-    try:
-        df = pd.read_excel(CARD_FILE)
+# Converte Posseduta in booleano corretto
+def convert_boolean(val):
+    if str(val).strip().upper() in ['TRUE', '1', 'YES']:
+        return True
+    else:
+        return False
 
-        # Verifica colonne attese
-        colonne_attese = ["ID_Set", "Numero_Carta", "Nome_Carta", "Rarita", "Lingua", "Posseduta"]
-        for col in colonne_attese:
-            if col not in df.columns:
-                raise ValueError(f"Colonna mancante nel file cards_template.xlsx: {col}")
+df_cards['Posseduta'] = df_cards['Posseduta'].apply(convert_boolean)
 
-        # Converte TRUE/FALSE in booleani Python
-        df["Posseduta"] = df["Posseduta"].astype(bool)
+# Converti DataFrame in lista di dizionari
+cards_list = df_cards.to_dict(orient='records')
 
-        data = df.to_dict(orient="records")
+# Scrivi cards.json
+with open(CARDS_JSON, 'w', encoding='utf-8') as f:
+    json.dump(cards_list, f, ensure_ascii=False, indent=2)
 
-        with open(CARDS_JSON, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-
-        print(f"[OK] File {CARDS_JSON} generato.")
-
-    except Exception as e:
-        print(f"Errore durante la generazione di {CARDS_JSON}: {e}")
-
-
-
-if __name__ == "__main__":
-    print("Generazione JSON in corso...\n")
-    genera_sets_json()
-    genera_cards_json()
-    print("\nCompletato!")
+print(f"Generato {CARDS_JSON} con {len(cards_list)} carte.")
