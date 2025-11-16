@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collezione Pokémon</title>
+  <title>Set Pokémon</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="renderHome()">
+<body onload="renderSet()">
   <header>
     <img src="assets/logo_pokemon.png" alt="Pokémon Logo">
-    <h1>Collezione Pokémon</h1>
+    <h1 id="set-title">Set</h1>
   </header>
 
-  <div id="content">
-    <p style="text-align:center; margin-top:50px;">Caricamento dati...</p>
+  <a href="index.html" class="home-btn">Home</a>
+
+  <div class="cards-container" id="cards-container">
+    <p style="text-align:center; margin-top:50px;">Caricamento carte...</p>
   </div>
 
   <script src="script.js"></script>

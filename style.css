@@ -1,0 +1,138 @@
+/* ===== Stile Generale ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ff0000; /* rosso Pokémon */
+  padding: 15px;
+  border-bottom: 4px solid #ffcb05; /* giallo Pokémon */
+}
+header img {
+  height: 60px;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ===== Home page - set container ===== */
+.era-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.era-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-left: 6px solid #ffcb05;
+  padding-left: 10px;
+}
+.set-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 2px solid #ffcb05;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.set-card:hover {
+  transform: scale(1.02);
+}
+.set-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.set-info img {
+  height: 50px;
+}
+.set-info div {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ===== Progress Bar ===== */
+.progress {
+  width: 160px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+}
+.progress-bar {
+  height: 100%;
+  background: #4caf50; /* verde Pokémon per progressi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ===== Set page - carte ===== */
+.cards-container {
+  margin: 20px auto;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.card-item {
+  width: 120px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffdddd; /* rosso se non posseduta */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.card-item.posseduta {
+  background: #4caf50; /* verde se posseduta */
+}
+.card-item:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Bottone home ===== */
+.home-btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 18px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #ffcb05;
+  transition: background 0.2s;
+}
+.home-btn:hover {
+  background: #ff4d4d;
+}
