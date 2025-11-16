@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collezione Pokémon</title>
+  <style>
+    :root{
+      --bg:#f2f2f2;
+      --card:#ffffff;
+      --muted:#666;
+      --accent:#ffcb05;
+      --progress:#4caf50;
+    }
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;padding:0;color:#222}
+    header{display:flex;align-items:center;gap:15px;background:var(--card);padding:16px;border-bottom:1px solid #ddd}
+    header img{height:56px}
+    header h1{margin:0;font-size:20px;color:#222}
+    #content{max-width:1100px;margin:22px auto;padding:0 16px}
+    .era-container{background:var(--card);border-radius:10px;padding:18px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+    .era-title{font-size:20px;font-weight:700;margin-bottom:12px;border-left:6px solid var(--accent);padding-left:10px}
+    .set-card{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:8px;background:#fafafa;border:1px solid #eee;margin:8px 0}
+    .set-info{display:flex;align-items:center;gap:12px}
+    .set-info img{height:44px;width:auto;border-radius:4px;object-fit:contain;background:#fff;padding:4px;border:1px solid #eee}
+    .set-name{font-weight:600}
+    .progress{width:220px;height:20px;background:#e6e6e6;border-radius:12px;overflow:hidden;position:relative}
+    .progress-bar{height:100%;background:var(--progress);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;white-space:nowrap}
+    .meta{font-size:13px;color:var(--muted)}
+    .center{text-align:center;padding:40px 0;color:var(--muted)}
+    /* responsive */
+    @media (max-width:640px){
+      .set-card{flex-direction:column;align-items:flex-start;gap:8px}
+      .progress{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo_pokemon.png" alt="Pokémon">
+    <h1>Collezione Pokémon</h1>
+  </header>
+
+  <div id="content">
+    <div class="center">Caricamento dati…</div>
+  </div>
+
+  <script>
+    // percorso relativo ai file nella repo (assets)
+    const SETS_JSON = 'assets/sets.json';
+    const CARDS_JSON = 'assets/cards.json';
+
+    // carica i due file in parallelo
+    Promise.all([
+      fetch(SETS_JSON).then(r => r.ok ? r.json() : Promise.reject('sets.json non trovato')),
+      fetch(CARDS_JSON).then(r => r.ok ? r.json() : Promise.reject('cards.json non trovato'))
+    ]).then(([sets, cards]) => {
+      renderPage(sets, cards);
+    }).catch(err => {
+      document.getElementById('content').innerHTML = `<div class="center">Errore caricamento dati: ${err}</div>`;
+      console.error(err);
+    });
+
+    function renderPage(setsArr, cardsArr) {
+      const content = document.getElementById('content');
+      content.innerHTML = '';
+
+      // normalizza chiavi (in caso arrivino con nomi leggermente diversi)
+      const sets = setsArr.map(s => ({
+        ID: s.ID ?? s.Id ?? s.id ?? null,
+        NomeSet: s.Nome_Set ?? s.NomeSet ?? s.Nome ?? s.NomeSet ?? '',
+        Totale_Carte: Number(s.Totale_Carte ?? s.TotaleCarte ?? s.Totale ?? 0) || 0,
+        Era: s.Era ?? s.Era ?? 'Altro',
+        Tipo: s.Tipo ?? '',
+        Nome_Logo: s.Nome_Logo ?? s.NomeLogo ?? s.Logo ?? ''
+      }));
+
+      const cards = cardsArr.map(c => ({
+        ID_Set: c.ID_Set ?? c.Id_Set ?? c.IDSet ?? c.ID ?? null,
+        Numero_Carta: c.Numero_Carta ?? c.NumeroCarta ?? c.Numero ?? '',
+        Nome_Carta: c.Nome_Carta ?? c.NomeCarta ?? c.Nome ?? '',
+        Rarita: c.Rarita ?? '',
+        Lingua: c.Lingua ?? '',
+        Posseduta: (typeof c.Posseduta === 'boolean') ? c.Posseduta :
+                   (String(c.Posseduta).toLowerCase() === 'true') ? true : false,
+        Bandiera: c.Bandiera ?? (c.Lingua === 'IT' ? '🇮🇹' : (c.Lingua === 'EN' ? '🇬🇧' : ''))
+      }));
+
+      // raggruppa sets per Era
+      const eras = {};
+      sets.forEach(s => {
+        const era = s.Era || 'Altro';
+        if (!eras[era]) eras[era] = [];
+        eras[era].push(s);
+      });
+
+      // per ogni set calcola possedute (se vuoi contare le carte)
+      sets.forEach(s => {
+        const owned = cards.filter(c => Number(c.ID_Set) === Number(s.ID)).length
+                      ? cards.filter(c => Number(c.ID_Set) === Number(s.ID)).reduce((acc,c) => acc + (c.Posseduta ? 1 : 0), 0)
+                      : 0;
+        // se tu vuoi sommare possedute come numero totale di copie, adattalo qui
+        s.Possedute = owned;
+      });
+
+      // render
+      for (const era of Object.keys(eras)) {
+        const eraBox = document.createElement('div');
+        eraBox.className = 'era-container';
+
+        const title = document.createElement('div');
+        title.className = 'era-title';
+        title.textContent = era;
+        eraBox.appendChild(title);
+
+        // ordina i set per nome o ID (opzionale)
+        eras[era].sort((a,b) => (a.ID || 0) - (b.ID || 0));
+
+        eras[era].forEach(set => {
+          const item = document.createElement('div');
+          item.className = 'set-card';
+
+          const left = document.createElement('div');
+          left.className = 'set-info';
+
+          const img = document.createElement('img');
+          // se il file logo è presente in assets, carica assets/<Nome_Logo>, altrimenti lascia placeholder
+          img.src = set.Nome_Logo ? `assets/${set.Nome_Logo}` : '';
+          img.alt = set.NomeSet;
+          img.onerror = function(){ this.style.display='none'; };
+
+          const nameWrap = document.createElement('div');
+          const name = document.createElement('div');
+          name.className = 'set-name';
+          name.textContent = set.NomeSet || '—';
+
+          const meta = document.createElement('div');
+          meta.className = 'meta';
+          meta.textContent = `${set.Totale_Carte} carte • ${set.Tipo || ''}`;
+
+          nameWrap.appendChild(name);
+          nameWrap.appendChild(meta);
+
+          left.appendChild(img);
+          left.appendChild(nameWrap);
+
+          const right = document.createElement('div');
+
+          const progressWrap = document.createElement('div');
+          progressWrap.className = 'progress';
+
+          // percentuale: usa Totale_Carte e Possedute (evita divisione per 0)
+          const tot = Number(set.Totale_Carte) || 0;
+          const poss = Number(set.Possedute) || 0;
+          const perc = tot ? Math.round((poss / tot) * 100) : 0;
+
+          const bar = document.createElement('div');
+          bar.className = 'progress-bar';
+          bar.style.width = perc + '%';
+          bar.textContent = `${poss} / ${tot} (${perc}%)`;
+
+          progressWrap.appendChild(bar);
+          right.appendChild(progressWrap);
+
+          item.appendChild(left);
+          item.appendChild(right);
+          eraBox.appendChild(item);
+        });
+
+        content.appendChild(eraBox);
+      }
+
+      // Footer rapido
+      const footer = document.createElement('div');
+      footer.style.textAlign = 'center';
+      footer.style.margin = '18px 0';
+      footer.style.color = '#888';
+      footer.textContent = `Sets caricati: ${sets.length} — Carte presenti nel JSON: ${cards.length}`;
+      content.appendChild(footer);
+    }
+  </script>
+</body>
+</html>

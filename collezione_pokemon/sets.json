@@ -1,0 +1,1026 @@
+[
+  {
+    "ID": 1,
+    "Nome_Set": "Set Base",
+    "Totale_Carte": 102,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_set_base.png"
+  },
+  {
+    "ID": 2,
+    "Nome_Set": "Jungle",
+    "Totale_Carte": 64,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_jungle.png"
+  },
+  {
+    "ID": 3,
+    "Nome_Set": "Fossil",
+    "Totale_Carte": 62,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_fossil.png"
+  },
+  {
+    "ID": 4,
+    "Nome_Set": "Team Rocket",
+    "Totale_Carte": 83,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_team_rocket.png"
+  },
+  {
+    "ID": 5,
+    "Nome_Set": "Gym Heroes",
+    "Totale_Carte": 132,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_gym_heroes.png"
+  },
+  {
+    "ID": 6,
+    "Nome_Set": "Gym Challenge",
+    "Totale_Carte": 132,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_gym_challenge.png"
+  },
+  {
+    "ID": 7,
+    "Nome_Set": "Neo Genesis",
+    "Totale_Carte": 111,
+    "Era": "Neo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_neo_genesis.png"
+  },
+  {
+    "ID": 8,
+    "Nome_Set": "Neo Discovery",
+    "Totale_Carte": 75,
+    "Era": "Neo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_neo_discovery.png"
+  },
+  {
+    "ID": 9,
+    "Nome_Set": "Neo Revelation",
+    "Totale_Carte": 66,
+    "Era": "Neo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_neo_revelation.png"
+  },
+  {
+    "ID": 10,
+    "Nome_Set": "Neo Destiny",
+    "Totale_Carte": 113,
+    "Era": "Neo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_neo_destiny.png"
+  },
+  {
+    "ID": 11,
+    "Nome_Set": "Expedition",
+    "Totale_Carte": 165,
+    "Era": "e-Card",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_expedition.png"
+  },
+  {
+    "ID": 12,
+    "Nome_Set": "Aquapolis",
+    "Totale_Carte": 186,
+    "Era": "e-Card",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_aquapolis.png"
+  },
+  {
+    "ID": 13,
+    "Nome_Set": "Skyridge",
+    "Totale_Carte": 182,
+    "Era": "e-Card",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_skyridge.png"
+  },
+  {
+    "ID": 14,
+    "Nome_Set": "Wizards Black Star Promos",
+    "Totale_Carte": 53,
+    "Era": "Wizards of the Coast",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_wizards_black_star_promos.png"
+  },
+  {
+    "ID": 15,
+    "Nome_Set": "EX Rubino & Zaffiro",
+    "Totale_Carte": 109,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_rubino_e_zaffiro.webp"
+  },
+  {
+    "ID": 16,
+    "Nome_Set": "EX Tempesta di Sabbia",
+    "Totale_Carte": 100,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_tempesta_di_sabbia.webp"
+  },
+  {
+    "ID": 17,
+    "Nome_Set": "EX Drago",
+    "Totale_Carte": 100,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_drago.webp"
+  },
+  {
+    "ID": 18,
+    "Nome_Set": "EX Team Magma vs Team Idro",
+    "Totale_Carte": 97,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_team_magma_vs_team_idro.webp"
+  },
+  {
+    "ID": 19,
+    "Nome_Set": "EX Leggende Nascoste",
+    "Totale_Carte": 102,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_leggende_nascoste.webp"
+  },
+  {
+    "ID": 20,
+    "Nome_Set": "EX Rosso Fuoco & Verde Foglia",
+    "Totale_Carte": 116,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_rossofuoco_e_verdefoglia.webp"
+  },
+  {
+    "ID": 21,
+    "Nome_Set": "EX Team Rocket Returns",
+    "Totale_Carte": 111,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_team_rocket_returns.webp"
+  },
+  {
+    "ID": 22,
+    "Nome_Set": "EX Deoxys",
+    "Totale_Carte": 108,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_deoxys.webp"
+  },
+  {
+    "ID": 23,
+    "Nome_Set": "EX Smeraldo",
+    "Totale_Carte": 107,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_smeraldo.webp"
+  },
+  {
+    "ID": 24,
+    "Nome_Set": "EX Forze Segrete",
+    "Totale_Carte": 145,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_forze_segrete.webp"
+  },
+  {
+    "ID": 25,
+    "Nome_Set": "EX Specie Delta",
+    "Totale_Carte": 114,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_specie_delta.webp"
+  },
+  {
+    "ID": 26,
+    "Nome_Set": "EX La Leggenda di Mew",
+    "Totale_Carte": 93,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_la_leggenda_di_mew.webp"
+  },
+  {
+    "ID": 27,
+    "Nome_Set": "EX Fantasmi di Holon",
+    "Totale_Carte": 111,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_fantasmi_di_holon.png"
+  },
+  {
+    "ID": 28,
+    "Nome_Set": "EX Guardiani dei Cristalli",
+    "Totale_Carte": 100,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_guardiani_dei_cristalli.webp"
+  },
+  {
+    "ID": 29,
+    "Nome_Set": "EX L'isola dei Draghi",
+    "Totale_Carte": 101,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_l'isola_dei_draghi.webp"
+  },
+  {
+    "ID": 30,
+    "Nome_Set": "EX Power Keepers",
+    "Totale_Carte": 108,
+    "Era": "EX",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_ex_power_keepers.webp"
+  },
+  {
+    "ID": 31,
+    "Nome_Set": "Nintendo Black Star Promos",
+    "Totale_Carte": 40,
+    "Era": "EX",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_nintendo_black_stars_promos.png"
+  },
+  {
+    "ID": 32,
+    "Nome_Set": "Diamante & Perla",
+    "Totale_Carte": 130,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla.png"
+  },
+  {
+    "ID": 33,
+    "Nome_Set": "Diamante & Perla - Tesori Misteriosi",
+    "Totale_Carte": 124,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_tesori_misteriosi.png"
+  },
+  {
+    "ID": 34,
+    "Nome_Set": "Diamante & Perla - Prodigi Segreti",
+    "Totale_Carte": 132,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_prodigi_segreti.png"
+  },
+  {
+    "ID": 35,
+    "Nome_Set": "Diamante & Perla - Incontri Leggendari",
+    "Totale_Carte": 106,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_incontri_leggendari.png"
+  },
+  {
+    "ID": 36,
+    "Nome_Set": "Diamante & Perla - Alba Suprema",
+    "Totale_Carte": 100,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_alba_suprema.png"
+  },
+  {
+    "ID": 37,
+    "Nome_Set": "Diamante & Perla - Il Risveglio dei Miti",
+    "Totale_Carte": 146,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_il_risveglio_dei_miti.webp"
+  },
+  {
+    "ID": 38,
+    "Nome_Set": "Diamante & Perla - Fronte di Tempesta",
+    "Totale_Carte": 106,
+    "Era": "Diamante & Perla",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_diamante_e_perla_fronte_di_tempesta.webp"
+  },
+  {
+    "ID": 39,
+    "Nome_Set": "DP Black Star Promos",
+    "Totale_Carte": 56,
+    "Era": "Diamante & Perla",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_dp_black_stars_promos.png"
+  },
+  {
+    "ID": 40,
+    "Nome_Set": "Platino",
+    "Totale_Carte": 133,
+    "Era": "Platino",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_platino.png"
+  },
+  {
+    "ID": 41,
+    "Nome_Set": "Platino - L'Ascesa dei Rivali",
+    "Totale_Carte": 120,
+    "Era": "Platino",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_platino_l'ascesa_dei_rivali.webp"
+  },
+  {
+    "ID": 42,
+    "Nome_Set": "Platinum - Supreme Victors",
+    "Totale_Carte": 153,
+    "Era": "Platino",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_platinum_supreme_victors.webp"
+  },
+  {
+    "ID": 43,
+    "Nome_Set": "Platino - Arceus",
+    "Totale_Carte": 111,
+    "Era": "Platino",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_platino_arceus.webp"
+  },
+  {
+    "ID": 44,
+    "Nome_Set": "HeartGold & SoulSilver",
+    "Totale_Carte": 124,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_heartgold_e_soulsilver.webp"
+  },
+  {
+    "ID": 45,
+    "Nome_Set": "HS - Forze Scatenate",
+    "Totale_Carte": 96,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_hs_forze_scatenate.png"
+  },
+  {
+    "ID": 46,
+    "Nome_Set": "HS - Senza Paura",
+    "Totale_Carte": 91,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_hs_senza_paura.png"
+  },
+  {
+    "ID": 47,
+    "Nome_Set": "HS - Battaglie Trionfali",
+    "Totale_Carte": 103,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_hs_battaglie_trionfali.png"
+  },
+  {
+    "ID": 48,
+    "Nome_Set": "HGSS Black Star Promos",
+    "Totale_Carte": 33,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_hgss_black_stars_promos.png"
+  },
+  {
+    "ID": 49,
+    "Nome_Set": "Nero e Bianco",
+    "Totale_Carte": 115,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco.png"
+  },
+  {
+    "ID": 50,
+    "Nome_Set": "Nero e Bianco - Nuove Forze",
+    "Totale_Carte": 98,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_nuove_forze.png"
+  },
+  {
+    "ID": 51,
+    "Nome_Set": "Nero e Bianco - Vittorie Regali",
+    "Totale_Carte": 102,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_vittorie_regali.png"
+  },
+  {
+    "ID": 52,
+    "Nome_Set": "Nero e Bianco - Destini Futuri",
+    "Totale_Carte": 103,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_destini_futuri.webp"
+  },
+  {
+    "ID": 53,
+    "Nome_Set": "Nero e Bianco - Esploratori delle Tenebre",
+    "Totale_Carte": 111,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_esploratori_delle_tenebre.webp"
+  },
+  {
+    "ID": 54,
+    "Nome_Set": "Nero e Bianco - Stirpe dei Draghi",
+    "Totale_Carte": 128,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_stirpe_dei_draghi.webp"
+  },
+  {
+    "ID": 55,
+    "Nome_Set": "Tesoro dei Draghi",
+    "Totale_Carte": 21,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_tesoro_dei_draghi.webp"
+  },
+  {
+    "ID": 56,
+    "Nome_Set": "Nero e Bianco - Confini Varcati",
+    "Totale_Carte": 153,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_confini_varcati.webp"
+  },
+  {
+    "ID": 57,
+    "Nome_Set": "Nero e Bianco - Uragano Plasma",
+    "Totale_Carte": 138,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_uragano_plasma.webp"
+  },
+  {
+    "ID": 58,
+    "Nome_Set": "Nero e Bianco - Glaciazione Plasma",
+    "Totale_Carte": 122,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_glaciazione_plasma.webp"
+  },
+  {
+    "ID": 59,
+    "Nome_Set": "Nero e Bianco - Esplosione Plasma",
+    "Totale_Carte": 105,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_nero_e_bianco_esplosione_plasma.webp"
+  },
+  {
+    "ID": 60,
+    "Nome_Set": "Black & White - Legendary Treasures",
+    "Totale_Carte": 140,
+    "Era": "Nero e Bianco",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_black_and_white_legendary_treasures.png"
+  },
+  {
+    "ID": 61,
+    "Nome_Set": "Promo stella nera BW",
+    "Totale_Carte": 116,
+    "Era": "Nero e Bianco",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_promo_stella_nera_bw.png"
+  },
+  {
+    "ID": 62,
+    "Nome_Set": "XY - Benvenuti a Kalos",
+    "Totale_Carte": 39,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_benvenuti_a_kalos.png"
+  },
+  {
+    "ID": 63,
+    "Nome_Set": "XY",
+    "Totale_Carte": 146,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy.webp"
+  },
+  {
+    "ID": 64,
+    "Nome_Set": "XY - Fuoco Infernale",
+    "Totale_Carte": 109,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_fuoco_infernale.png"
+  },
+  {
+    "ID": 65,
+    "Nome_Set": "XY - Colpi Furiosi",
+    "Totale_Carte": 113,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_colpi_furiosi.png"
+  },
+  {
+    "ID": 66,
+    "Nome_Set": "XY - Forze Spettrali",
+    "Totale_Carte": 122,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_forze_spettrali.webp"
+  },
+  {
+    "ID": 67,
+    "Nome_Set": "XY - Scontro Primordiale",
+    "Totale_Carte": 164,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_scontro_primordiale.webp"
+  },
+  {
+    "ID": 68,
+    "Nome_Set": "XY - Furie Volanti",
+    "Totale_Carte": 110,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_furie_volanti.png"
+  },
+  {
+    "ID": 69,
+    "Nome_Set": "XY - Antiche Origini",
+    "Totale_Carte": 100,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_antiche_origini.webp"
+  },
+  {
+    "ID": 70,
+    "Nome_Set": "XY - Turboblitz",
+    "Totale_Carte": 164,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_turboblitz.webp"
+  },
+  {
+    "ID": 71,
+    "Nome_Set": "XY - Turbocrash",
+    "Totale_Carte": 123,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_turbocrash.png"
+  },
+  {
+    "ID": 72,
+    "Nome_Set": "Generazioni",
+    "Totale_Carte": 115,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_generazioni.png"
+  },
+  {
+    "ID": 73,
+    "Nome_Set": "XY - Destini Incrociati",
+    "Totale_Carte": 125,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_destini_incrociati.png"
+  },
+  {
+    "ID": 74,
+    "Nome_Set": "XY - Vapori Accesi",
+    "Totale_Carte": 116,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_vapori_accesi.webp"
+  },
+  {
+    "ID": 75,
+    "Nome_Set": "XY - Evoluzioni",
+    "Totale_Carte": 113,
+    "Era": "XY",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_xy_evoluzioni.png"
+  },
+  {
+    "ID": 76,
+    "Nome_Set": "Promo stella nera XY",
+    "Totale_Carte": 213,
+    "Era": "XY",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_promo_stella_nera_xy.png"
+  },
+  {
+    "ID": 77,
+    "Nome_Set": "Sole e Luna",
+    "Totale_Carte": 163,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna.png"
+  },
+  {
+    "ID": 78,
+    "Nome_Set": "Sole e Luna - Guardiani Nascenti",
+    "Totale_Carte": 169,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_guardiani_nascenti.webp"
+  },
+  {
+    "ID": 79,
+    "Nome_Set": "Sole e Luna - Ombre Infuocate",
+    "Totale_Carte": 169,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_ombre_infuocate.webp"
+  },
+  {
+    "ID": 80,
+    "Nome_Set": "Leggende Iridescenti",
+    "Totale_Carte": 78,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_leggende_iridescenti.webp"
+  },
+  {
+    "ID": 81,
+    "Nome_Set": "Sole e Luna - Invasione Scarlatta",
+    "Totale_Carte": 124,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_invasione_scarlatta.png"
+  },
+  {
+    "ID": 82,
+    "Nome_Set": "Sole e Luna - Ultraprisma",
+    "Totale_Carte": 173,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_ultraprisma.webp"
+  },
+  {
+    "ID": 83,
+    "Nome_Set": "Sole e Luna - Apocalisse di Luce",
+    "Totale_Carte": 146,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_apocalisse_di_luce.webp"
+  },
+  {
+    "ID": 84,
+    "Nome_Set": "Sole e Luna - Tempesta Astrale",
+    "Totale_Carte": 183,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_tempesta_astrale.webp"
+  },
+  {
+    "ID": 85,
+    "Nome_Set": "Trionfo dei Draghi",
+    "Totale_Carte": 78,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_trionfo_dei_draghi.webp"
+  },
+  {
+    "ID": 86,
+    "Nome_Set": "Sole e Luna - Tuoni Perduti",
+    "Totale_Carte": 236,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_tuoni_perduti.webp"
+  },
+  {
+    "ID": 87,
+    "Nome_Set": "Sole e Luna - Gioco di Squadra",
+    "Totale_Carte": 196,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_gioco_di_squadra.webp"
+  },
+  {
+    "ID": 88,
+    "Nome_Set": "Detective Pikachu",
+    "Totale_Carte": 18,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_detective_pikachu.webp"
+  },
+  {
+    "ID": 89,
+    "Nome_Set": "Sole e Luna - Legami Inossidabili",
+    "Totale_Carte": 234,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_legami_inossidabili.webp"
+  },
+  {
+    "ID": 90,
+    "Nome_Set": "Sole e Luna - Sintonia Mentale",
+    "Totale_Carte": 258,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_sintonia_mentale.webp"
+  },
+  {
+    "ID": 91,
+    "Nome_Set": "Destino Sfuggente",
+    "Totale_Carte": 163,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_destino_sfuggente.webp"
+  },
+  {
+    "ID": 92,
+    "Nome_Set": "Sole e Luna - Eclissi Cosmica",
+    "Totale_Carte": 271,
+    "Era": "Sole e Luna",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_sole_e_luna_eclissi_cosmica.webp"
+  },
+  {
+    "ID": 93,
+    "Nome_Set": "Promo stella nera SM",
+    "Totale_Carte": 249,
+    "Era": "Sole e Luna",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_promo_stella_nera_sm.png"
+  },
+  {
+    "ID": 94,
+    "Nome_Set": "Spada e Scudo",
+    "Totale_Carte": 216,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo.webp"
+  },
+  {
+    "ID": 95,
+    "Nome_Set": "Spada e Scudo - Fragore Ribelle",
+    "Totale_Carte": 209,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_fragore_ribelle.webp"
+  },
+  {
+    "ID": 96,
+    "Nome_Set": "Spada e Scudo - Fiamme Oscure",
+    "Totale_Carte": 201,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_fiamme_oscure.webp"
+  },
+  {
+    "ID": 97,
+    "Nome_Set": "Futuri Campioni",
+    "Totale_Carte": 80,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_futuri_campioni.webp"
+  },
+  {
+    "ID": 98,
+    "Nome_Set": "Spada e Scudo - Voltaggio Sfolgorante",
+    "Totale_Carte": 203,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_voltaggio_sfolgorante.webp"
+  },
+  {
+    "ID": 99,
+    "Nome_Set": "Destino Splendente",
+    "Totale_Carte": 195,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_destino_splendente.webp"
+  },
+  {
+    "ID": 100,
+    "Nome_Set": "Spada e Scudo - Stili di Lotta",
+    "Totale_Carte": 183,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_stili_di_lotta.webp"
+  },
+  {
+    "ID": 101,
+    "Nome_Set": "Spada e Scudo - Regno Glaciale",
+    "Totale_Carte": 233,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_regno_glaciale.webp"
+  },
+  {
+    "ID": 102,
+    "Nome_Set": "Spada e Scudo - Evoluzioni Eteree",
+    "Totale_Carte": 237,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_evoluzioni_eteree.webp"
+  },
+  {
+    "ID": 103,
+    "Nome_Set": "Spada e Scudo - Colpo Fusione",
+    "Totale_Carte": 284,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_colpo_fusione.webp"
+  },
+  {
+    "ID": 104,
+    "Nome_Set": "Spada e Scudo - Astri Lucenti",
+    "Totale_Carte": 216,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_astri_lucenti.webp"
+  },
+  {
+    "ID": 105,
+    "Nome_Set": "Spada e Scudo - Lucentezza Siderale",
+    "Totale_Carte": 246,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_lucentezza_siderale.webp"
+  },
+  {
+    "ID": 106,
+    "Nome_Set": "Pokémon GO",
+    "Totale_Carte": 88,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_pokemon_go.webp"
+  },
+  {
+    "ID": 107,
+    "Nome_Set": "Spada e Scudo - Origine Perduta",
+    "Totale_Carte": 247,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_origine_perduta.webp"
+  },
+  {
+    "ID": 108,
+    "Nome_Set": "Spada e Scudo - Tempesta Argentata",
+    "Totale_Carte": 245,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_spada_e_scudo_tempesta_argentata.webp"
+  },
+  {
+    "ID": 109,
+    "Nome_Set": "Zenit Regale",
+    "Totale_Carte": 230,
+    "Era": "Spada e Scudo",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_zenit_regale.webp"
+  },
+  {
+    "ID": 110,
+    "Nome_Set": "Promo stella nera SWSH",
+    "Totale_Carte": 305,
+    "Era": "Spada e Scudo",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_promo_stella_nera_swsh.png"
+  },
+  {
+    "ID": 111,
+    "Nome_Set": "Scarlatto e Violetto",
+    "Totale_Carte": 258,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto.webp"
+  },
+  {
+    "ID": 112,
+    "Nome_Set": "Scarlatto e Violetto - Evoluzioni a Paldea",
+    "Totale_Carte": 279,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_evoluzioni_a_paldea.webp"
+  },
+  {
+    "ID": 113,
+    "Nome_Set": "Scarlatto e Violetto - Ossidiana Infuocata",
+    "Totale_Carte": 230,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_ossidiana_infuocata.webp"
+  },
+  {
+    "ID": 114,
+    "Nome_Set": "Scarlatto e Violetto - 151",
+    "Totale_Carte": 210,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_151.webp"
+  },
+  {
+    "ID": 115,
+    "Nome_Set": "Scarlatto e Violetto - Paradosso Temporale",
+    "Totale_Carte": 266,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_paradosso_temporale.webp"
+  },
+  {
+    "ID": 116,
+    "Nome_Set": "Scarlatto e Violetto - Destino di Paldea",
+    "Totale_Carte": 245,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_destino_di_paldea.webp"
+  },
+  {
+    "ID": 117,
+    "Nome_Set": "Scarlatto e Violetto - Cronoforze",
+    "Totale_Carte": 218,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_cronoforze.webp"
+  },
+  {
+    "ID": 118,
+    "Nome_Set": "Scarlatto e Violetto - Crepuscolo Mascherato",
+    "Totale_Carte": 226,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_crepuscolo_mascherato.webp"
+  },
+  {
+    "ID": 119,
+    "Nome_Set": "Scarlatto e Violetto - Segreto Fiabesco",
+    "Totale_Carte": 99,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_segreto_fiabesco.webp"
+  },
+  {
+    "ID": 120,
+    "Nome_Set": "Scarlatto e Violetto - Corona Astrale",
+    "Totale_Carte": 175,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_corona_astrale.webp"
+  },
+  {
+    "ID": 121,
+    "Nome_Set": "Scarlatto e Violetto - Scintille Folgoranti",
+    "Totale_Carte": 252,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_scintille_folgoranti.webp"
+  },
+  {
+    "ID": 122,
+    "Nome_Set": "Scarlatto e Violetto - Evoluzioni Prismatiche",
+    "Totale_Carte": 180,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_evoluzioni_prismatiche.webp"
+  },
+  {
+    "ID": 123,
+    "Nome_Set": "Scarlatto e Violetto - Avventure Insieme",
+    "Totale_Carte": 190,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_avventure_insieme.webp"
+  },
+  {
+    "ID": 124,
+    "Nome_Set": "Scarlatto e Violetto - Rivali Predestinati",
+    "Totale_Carte": 244,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_rivali_predestinati.webp"
+  },
+  {
+    "ID": 125,
+    "Nome_Set": "Scarlatto e Violetto - Luce Nera",
+    "Totale_Carte": 172,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_luce_nera.webp"
+  },
+  {
+    "ID": 126,
+    "Nome_Set": "Scarlatto e Violetto - Fuoco Bianco",
+    "Totale_Carte": 173,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_scarlatto_e_violetto_fuoco_bianco.webp"
+  },
+  {
+    "ID": 127,
+    "Nome_Set": "Promo stella nera SVP",
+    "Totale_Carte": 226,
+    "Era": "Scarlatto e Violetto",
+    "Tipo": "Promo",
+    "Nome_Logo": "logo_promo_stella_nera_svp.webp"
+  },
+  {
+    "ID": 128,
+    "Nome_Set": "Megaevoluzione",
+    "Totale_Carte": 188,
+    "Era": "Megaevoluzione",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_megaevoluzione.webp"
+  }
+]
