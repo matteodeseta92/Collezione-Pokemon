@@ -111,29 +111,34 @@ async function renderSet() {
   const cardsContainer = document.getElementById("cards-container");
   cardsContainer.innerHTML = "";
 
-  cardsData.filter(c => c.ID_Set === set.ID).forEach(c => {
-    const cardDiv = document.createElement("div");
-    cardDiv.className = "card-item";
-    if (c.Posseduta) cardDiv.classList.add("posseduta");
-    cardDiv.textContent = c.Nome_Carta;
+  cardsData
+    .filter(c => c.ID_Set === set.ID)
+    .forEach(c => {
+      const cardDiv = document.createElement("div");
+      cardDiv.className = "card-item";
+      if (c.Posseduta) cardDiv.classList.add("posseduta");
 
-    // click -> toggle posseduta e salva su localStorage
-    cardDiv.onclick = () => {
-      c.Posseduta = !c.Posseduta;
-      cardDiv.classList.toggle("posseduta");
-      saveCardsState(cardsData);
+      // Numero e nome carta
+      cardDiv.innerHTML = `<div style="font-size:14px; margin-bottom:5px;">#${c.Numero_Carta}</div>
+                           <div>${c.Nome_Carta}</div>`;
 
-      // Aggiorna anche la progress bar se torni alla home
-      const progressBar = document.querySelector(`.set-card .progress-bar`);
-      if (progressBar) {
-        const possedute = cardsData.filter(card => card.ID_Set === set.ID && card.Posseduta).length;
-        const totale = set.Totale_Carte || 0;
-        const perc = totale ? Math.round((possedute / totale) * 100) : 0;
-        progressBar.style.width = perc + "%";
-        progressBar.textContent = `${possedute} / ${totale}`;
-      }
-    };
+      // click -> toggle posseduta e salva su localStorage
+      cardDiv.onclick = () => {
+        c.Posseduta = !c.Posseduta;
+        cardDiv.classList.toggle("posseduta");
+        saveCardsState(cardsData);
 
-    cardsContainer.appendChild(cardDiv);
-  });
+        // Aggiorna anche la progress bar se torni alla home
+        const progressBar = document.querySelector(`.set-card .progress-bar`);
+        if (progressBar) {
+          const possedute = cardsData.filter(card => card.ID_Set === set.ID && card.Posseduta).length;
+          const totale = set.Totale_Carte || 0;
+          const perc = totale ? Math.round((possedute / totale) * 100) : 0;
+          progressBar.style.width = perc + "%";
+          progressBar.textContent = `${possedute} / ${totale}`;
+        }
+      };
+
+      cardsContainer.appendChild(cardDiv);
+    });
 }

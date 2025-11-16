@@ -98,27 +98,55 @@ header h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
+
 .card-item {
   width: 120px;
   height: 160px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #ffdddd; /* rosso se non posseduta */
   color: #fff;
   font-weight: bold;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 5px;
 }
+
+/* Verde se posseduta */
 .card-item.posseduta {
-  background: #4caf50; /* verde se posseduta */
+  background: #4caf50;
 }
+
+/* Numero carta */
+.card-item div:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  margin-bottom: 6px;
+}
+
+/* Nome carta */
+.card-item div:last-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Hover */
 .card-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
 
 /* ===== Bottone home ===== */
 .home-btn {
