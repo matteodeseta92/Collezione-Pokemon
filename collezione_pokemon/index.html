@@ -35,8 +35,8 @@
     }
 
     async function renderPage() {
-      const sets = await getJSON('collezione-pokemon/sets.json');
-      const cards = await getJSON('collezione-pokemon/cards.json');
+      const sets = await getJSON('sets.json');
+      const cards = await getJSON('cards.json');
 
       const content = document.getElementById("content");
       content.innerHTML = "";
@@ -65,7 +65,7 @@
           info.className = "set-info";
 
           const img = document.createElement("img");
-          img.src = set.Nome_Logo ? `collezione-pokemon/assets/${set.Nome_Logo}` : "";
+          img.src = set.Nome_Logo ? `assets/${set.Nome_Logo}` : "";
           img.alt = set.Nome_Set;
 
           const name = document.createElement("div");
