@@ -13,14 +13,27 @@ async function loadJSON(file) {
 function saveCardsState(cards) {
   localStorage.setItem("cardsState", JSON.stringify(cards));
 }
-
 function loadCardsState() {
   const data = localStorage.getItem("cardsState");
   return data ? JSON.parse(data) : null;
 }
 
+// ===== THEME TOGGLE =====
+function initThemeToggle() {
+  const toggle = document.getElementById("themeToggle");
+  const current = localStorage.getItem("theme") || "light";
+  document.body.classList.add(current);
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+    const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+  });
+}
+
 // ===== HOME PAGE =====
 async function renderHome() {
+  initThemeToggle();
   const setsData = await loadJSON('sets.json');
   let cardsData = loadCardsState();
   if (!cardsData) cardsData = await loadJSON('cards.json');
@@ -61,24 +74,23 @@ async function renderHome() {
       info.appendChild(img);
       info.appendChild(name);
 
-      // ===== Progress Bar con numero sempre centrato =====
+      const progress = document.createElement("div");
+      progress.className = "progress";
+
       const possedute = cardsData.filter(c => c.ID_Set === set.ID && c.Posseduta).length;
       const totale = set.Totale_Carte || 0;
       const perc = totale ? Math.round((possedute / totale) * 100) : 0;
-
-      const progress = document.createElement("div");
-      progress.className = "progress";
 
       const bar = document.createElement("div");
       bar.className = "progress-bar";
       bar.style.width = perc + "%";
 
-      const text = document.createElement("div");
-      text.className = "progress-text";
-      text.textContent = `${possedute} / ${totale}`;
+      const barText = document.createElement("div");
+      barText.className = "progress-text";
+      barText.textContent = `${possedute} / ${totale}`;
 
       progress.appendChild(bar);
-      progress.appendChild(text);
+      progress.appendChild(barText);
 
       card.appendChild(info);
       card.appendChild(progress);
@@ -97,11 +109,11 @@ async function renderHome() {
 
 // ===== SET PAGE =====
 async function renderSet() {
+  initThemeToggle();
   const urlParams = new URLSearchParams(window.location.search);
   const setName = urlParams.get('set');
   const setsData = await loadJSON('sets.json');
 
-  // Carica dati carte salvati o originali
   let cardsData = loadCardsState();
   if (!cardsData) cardsData = await loadJSON('cards.json');
 
@@ -120,25 +132,13 @@ async function renderSet() {
     const cardDiv = document.createElement("div");
     cardDiv.className = "card-item";
     if (c.Posseduta) cardDiv.classList.add("posseduta");
-    cardDiv.textContent = `${c.Numero_Carta}. ${c.Nome_Carta}`; // aggiunge numero carta
+    cardDiv.textContent = c.Nome_Carta;
+    cardDiv.setAttribute("data-number", c.Numero_Carta); // mostra numero
 
-    // click -> toggle posseduta e salva su localStorage
     cardDiv.onclick = () => {
       c.Posseduta = !c.Posseduta;
       cardDiv.classList.toggle("posseduta");
       saveCardsState(cardsData);
-
-      // Aggiorna anche la progress bar se torni alla home
-      const progressBar = document.querySelector(`.set-card .progress-bar`);
-      if (progressBar) {
-        const possedute = cardsData.filter(card => card.ID_Set === set.ID && card.Posseduta).length;
-        const totale = set.Totale_Carte || 0;
-        const perc = totale ? Math.round((possedute / totale) * 100) : 0;
-        progressBar.style.width = perc + "%";
-
-        const text = progressBar.parentElement.querySelector(".progress-text");
-        if (text) text.textContent = `${possedute} / ${totale}`;
-      }
     };
 
     cardsContainer.appendChild(cardDiv);

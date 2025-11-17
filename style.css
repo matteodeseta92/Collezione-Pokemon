@@ -3,8 +3,22 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
   color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background-image: url('assets/bg_light.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+body.dark {
+  background-image: url('assets/bg_dark.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
 /* ===== Header ===== */
@@ -15,6 +29,9 @@ header {
   background: #ff0000; /* rosso Pokémon */
   padding: 15px;
   border-bottom: 4px solid #ffcb05; /* giallo Pokémon */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 header img {
   height: 60px;
@@ -25,15 +42,24 @@ header h1 {
   color: #fff;
   text-shadow: 1px 1px 2px #000;
 }
+.toggle-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /* ===== Home page - set container ===== */
 .era-container {
   margin: 20px auto;
   padding: 20px;
   max-width: 900px;
-  background: #fff;
+  background: rgba(255,255,255,0.9);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+body.dark .era-container {
+  background: rgba(0,0,0,0.7);
 }
 .era-title {
   font-size: 26px;
@@ -54,6 +80,10 @@ header h1 {
   cursor: pointer;
   transition: transform 0.2s;
 }
+body.dark .set-card {
+  background: #222;
+  border-color: #ffcb05;
+}
 .set-card:hover {
   transform: scale(1.02);
 }
@@ -72,17 +102,17 @@ header h1 {
 
 /* ===== Progress Bar ===== */
 .progress {
-  width: 160px;        /* larghezza desktop */
+  width: 100%;
+  max-width: 160px;
   height: 20px;
   background: #ddd;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  flex-shrink: 0;      /* impedisce restringimento */
 }
 .progress-bar {
   height: 100%;
-  background: #4caf50; /* verde Pokémon */
+  background: #4caf50;
   transition: width 0.3s;
 }
 .progress-text {
@@ -97,24 +127,18 @@ header h1 {
   color: #000;
 }
 
-/* ---- Mobile: progress bar più stretta ma uniforme ---- */
-@media (max-width: 600px) {
-  .progress {
-    width: 120px;   /* tutte uguali su mobile */
-  }
-}
-
 /* ===== Set page - carte ===== */
 .cards-container {
   margin: 20px auto;
   max-width: 900px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
+  justify-content: center;
 }
 .card-item {
-  width: 120px;
-  height: 160px;
+  width: 100px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,14 +152,14 @@ header h1 {
   position: relative;
   padding: 5px;
   box-sizing: border-box;
+  font-size: 14px;
 }
 .card-item.posseduta {
-  background: #4caf50; /* verde se posseduta */
+  background: #4caf50;
 }
 .card-item:hover {
   transform: scale(1.05);
 }
-
 /* Numero carta in alto a sinistra */
 .card-item::before {
   content: attr(data-number);
