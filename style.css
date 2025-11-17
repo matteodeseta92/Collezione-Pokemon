@@ -8,14 +8,14 @@ body {
 }
 
 body.light {
-  background-image: url('assets/bg_light.jpg');
+  background-image: url('assets/bg_light.jpeg');
   background-size: cover;
   background-position: center;
   color: #333;
 }
 
 body.dark {
-  background-image: url('assets/bg_dark.jpg');
+  background-image: url('assets/bg_dark.jpeg');
   background-size: cover;
   background-position: center;
   color: #fff;
