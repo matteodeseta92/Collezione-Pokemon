@@ -72,16 +72,17 @@ header h1 {
 
 /* ===== Progress Bar ===== */
 .progress {
-  width: 160px;
+  width: 160px;        /* larghezza desktop */
   height: 20px;
   background: #ddd;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;      /* impedisce restringimento */
 }
 .progress-bar {
   height: 100%;
-  background: #4caf50; /* verde Pokémon per progressi */
+  background: #4caf50; /* verde Pokémon */
   transition: width 0.3s;
 }
 .progress-text {
@@ -94,6 +95,13 @@ header h1 {
   line-height: 20px;
   font-weight: bold;
   color: #000;
+}
+
+/* ---- Mobile: progress bar più stretta ma uniforme ---- */
+@media (max-width: 600px) {
+  .progress {
+    width: 120px;   /* tutte uguali su mobile */
+  }
 }
 
 /* ===== Set page - carte ===== */
