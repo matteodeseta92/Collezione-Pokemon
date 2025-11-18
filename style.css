@@ -26,9 +26,9 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #ff0000; /* rosso Pokémon */
+  background: #ff0000;
   padding: 15px;
-  border-bottom: 4px solid #ffcb05; /* giallo Pokémon */
+  border-bottom: 4px solid #ffcb05;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -49,7 +49,18 @@ header h1 {
   cursor: pointer;
 }
 
-/* ===== Home page - set container ===== */
+/* ===== GIF PICCOLE ===== */
+.tiny-gif {
+  height: 32px;
+  vertical-align: middle;
+}
+
+.tiny-gif-set {
+  height: 40px;
+  margin-left: 10px;
+}
+
+/* ===== Home page ===== */
 .era-container {
   margin: 20px auto;
   padding: 20px;
@@ -67,7 +78,11 @@ body.dark .era-container {
   margin-bottom: 15px;
   border-left: 6px solid #ffcb05;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
 .set-card {
   display: flex;
   align-items: center;
@@ -82,11 +97,11 @@ body.dark .era-container {
 }
 body.dark .set-card {
   background: #222;
-  border-color: #ffcb05;
 }
 .set-card:hover {
   transform: scale(1.02);
 }
+
 .set-info {
   display: flex;
   align-items: center;
@@ -95,12 +110,8 @@ body.dark .set-card {
 .set-info img {
   height: 50px;
 }
-.set-info div {
-  font-weight: bold;
-  font-size: 18px;
-}
 
-/* ===== Progress Bar ===== */
+/* ===== Progress ===== */
 .progress {
   width: 100%;
   max-width: 160px;
@@ -113,7 +124,6 @@ body.dark .set-card {
 .progress-bar {
   height: 100%;
   background: #4caf50;
-  transition: width 0.3s;
 }
 .progress-text {
   position: absolute;
@@ -127,7 +137,35 @@ body.dark .set-card {
   color: #000;
 }
 
-/* ===== Set page - carte ===== */
+/* ===== Logo alternativo + GIF ===== */
+#set-alt-logo-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alt-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.set-alt-logo {
+  max-width: 180px;
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+body.dark .set-alt-logo {
+  background: rgba(0,0,0,0.5);
+}
+
+/* ===== Carte ===== */
 .cards-container {
   margin: 20px auto;
   max-width: 900px;
@@ -142,7 +180,7 @@ body.dark .set-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffdddd; /* rosso se non posseduta */
+  background: #ffdddd;
   color: #fff;
   font-weight: bold;
   text-align: center;
@@ -152,7 +190,6 @@ body.dark .set-card {
   position: relative;
   padding: 5px;
   box-sizing: border-box;
-  font-size: 14px;
 }
 .card-item.posseduta {
   background: #4caf50;
@@ -160,30 +197,6 @@ body.dark .set-card {
 .card-item:hover {
   transform: scale(1.05);
 }
-
-/* ===== LOGO ALTERNATIVO SET ===== */
-#set-alt-logo-container {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.set-alt-logo {
-  max-width: 180px;
-  width: 40%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  padding: 8px;
-  background: rgba(255,255,255,0.7);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-body.dark .set-alt-logo {
-  background: rgba(0,0,0,0.5);
-}
-
-/* Numero carta in alto a sinistra */
 .card-item::before {
   content: attr(data-number);
   position: absolute;
@@ -205,7 +218,6 @@ body.dark .set-alt-logo {
   text-decoration: none;
   border-radius: 8px;
   border: 2px solid #ffcb05;
-  transition: background 0.2s;
 }
 .home-btn:hover {
   background: #ff4d4d;

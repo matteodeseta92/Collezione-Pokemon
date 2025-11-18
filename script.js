@@ -53,7 +53,14 @@ async function renderHome() {
 
     const title = document.createElement("div");
     title.className = "era-title";
-    title.textContent = era;
+
+    // GIF piccola accanto al titolo
+    const gif = document.createElement("img");
+    gif.src = "assets/home_pikachu.gif";
+    gif.className = "tiny-gif";
+
+    title.appendChild(gif);
+    title.appendChild(document.createTextNode(" " + era));
     eraBox.appendChild(title);
 
     eras[era].forEach(set => {
@@ -123,16 +130,27 @@ async function renderSet() {
 
   document.getElementById("set-title").textContent = set.Nome_Set;
 
-  // ---- LOGO ALTERNATIVO ----
+  // ---- LOGO ALTERNATIVO + GIF ----
   const altLogoBox = document.getElementById("set-alt-logo-container");
   altLogoBox.innerHTML = "";
 
   if (set.Logo_Alternativo) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "alt-logo-wrapper";
+
     const img = document.createElement("img");
     img.className = "set-alt-logo";
     img.src = `img/${set.Logo_Alternativo}`;
     img.alt = "Logo del set";
-    altLogoBox.appendChild(img);
+
+    const gif = document.createElement("img");
+    gif.src = "assets/sets_pikachu.gif";
+    gif.className = "tiny-gif-set";
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(gif);
+
+    altLogoBox.appendChild(wrapper);
   }
 
   // ---- CARTE ----
