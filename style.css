@@ -52,12 +52,16 @@ header h1 {
 /* ===== GIF PICCOLE ===== */
 .tiny-gif {
   height: 32px;
-  vertical-align: middle;
+  width: auto;
+  image-rendering: auto;
 }
+
 
 .tiny-gif-set {
   height: 40px;
   margin-left: 10px;
+  width: auto;
+  image-rendering: auto;
 }
 
 /* ===== Home page ===== */

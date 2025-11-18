@@ -134,13 +134,16 @@ async function renderSet() {
   const altLogoBox = document.getElementById("set-alt-logo-container");
   altLogoBox.innerHTML = "";
 
-  if (set.Logo_Alternativo) {
+  // PRENDI LOGO ALTERNATIVO DALLE CARTE
+  const firstCardWithLogo = cardsData.find(c => c.ID_Set === set.ID && c.Logo_Alternativo);
+
+  if (firstCardWithLogo?.Logo_Alternativo) {
     const wrapper = document.createElement("div");
     wrapper.className = "alt-logo-wrapper";
 
     const img = document.createElement("img");
     img.className = "set-alt-logo";
-    img.src = `img/${set.Logo_Alternativo}`;
+    img.src = `img/${firstCardWithLogo.Logo_Alternativo}`;
     img.alt = "Logo del set";
 
     const gif = document.createElement("img");
@@ -149,7 +152,6 @@ async function renderSet() {
 
     wrapper.appendChild(img);
     wrapper.appendChild(gif);
-
     altLogoBox.appendChild(wrapper);
   }
 
