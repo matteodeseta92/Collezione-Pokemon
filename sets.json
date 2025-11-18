@@ -377,6 +377,14 @@
   },
   {
     "ID": 48,
+    "Nome_Set": "Richiamo delle Leggende",
+    "Totale_Carte": 106,
+    "Era": "HeartGold & SoulSilver",
+    "Tipo": "Set",
+    "Nome_Logo": "logo_richiamo_delle_leggende.png"
+  },
+  {
+    "ID": 49,
     "Nome_Set": "HGSS Black Star Promos",
     "Totale_Carte": 33,
     "Era": "HeartGold & SoulSilver",
@@ -384,7 +392,7 @@
     "Nome_Logo": "logo_hgss_black_stars_promos.png"
   },
   {
-    "ID": 49,
+    "ID": 50,
     "Nome_Set": "Nero e Bianco",
     "Totale_Carte": 115,
     "Era": "Nero e Bianco",
@@ -392,7 +400,7 @@
     "Nome_Logo": "logo_nero_e_bianco.png"
   },
   {
-    "ID": 50,
+    "ID": 51,
     "Nome_Set": "Nero e Bianco - Nuove Forze",
     "Totale_Carte": 98,
     "Era": "Nero e Bianco",
@@ -400,7 +408,7 @@
     "Nome_Logo": "logo_nero_e_bianco_nuove_forze.png"
   },
   {
-    "ID": 51,
+    "ID": 52,
     "Nome_Set": "Nero e Bianco - Vittorie Regali",
     "Totale_Carte": 102,
     "Era": "Nero e Bianco",
@@ -408,7 +416,7 @@
     "Nome_Logo": "logo_nero_e_bianco_vittorie_regali.png"
   },
   {
-    "ID": 52,
+    "ID": 53,
     "Nome_Set": "Nero e Bianco - Destini Futuri",
     "Totale_Carte": 103,
     "Era": "Nero e Bianco",
@@ -416,7 +424,7 @@
     "Nome_Logo": "logo_nero_e_bianco_destini_futuri.webp"
   },
   {
-    "ID": 53,
+    "ID": 54,
     "Nome_Set": "Nero e Bianco - Esploratori delle Tenebre",
     "Totale_Carte": 111,
     "Era": "Nero e Bianco",
@@ -424,7 +432,7 @@
     "Nome_Logo": "logo_nero_e_bianco_esploratori_delle_tenebre.webp"
   },
   {
-    "ID": 54,
+    "ID": 55,
     "Nome_Set": "Nero e Bianco - Stirpe dei Draghi",
     "Totale_Carte": 128,
     "Era": "Nero e Bianco",
@@ -432,7 +440,7 @@
     "Nome_Logo": "logo_nero_e_bianco_stirpe_dei_draghi.webp"
   },
   {
-    "ID": 55,
+    "ID": 56,
     "Nome_Set": "Tesoro dei Draghi",
     "Totale_Carte": 21,
     "Era": "Nero e Bianco",
@@ -440,7 +448,7 @@
     "Nome_Logo": "logo_nero_e_bianco_tesoro_dei_draghi.webp"
   },
   {
-    "ID": 56,
+    "ID": 57,
     "Nome_Set": "Nero e Bianco - Confini Varcati",
     "Totale_Carte": 153,
     "Era": "Nero e Bianco",
@@ -448,7 +456,7 @@
     "Nome_Logo": "logo_nero_e_bianco_confini_varcati.webp"
   },
   {
-    "ID": 57,
+    "ID": 58,
     "Nome_Set": "Nero e Bianco - Uragano Plasma",
     "Totale_Carte": 138,
     "Era": "Nero e Bianco",
@@ -456,7 +464,7 @@
     "Nome_Logo": "logo_nero_e_bianco_uragano_plasma.webp"
   },
   {
-    "ID": 58,
+    "ID": 59,
     "Nome_Set": "Nero e Bianco - Glaciazione Plasma",
     "Totale_Carte": 122,
     "Era": "Nero e Bianco",
@@ -464,7 +472,7 @@
     "Nome_Logo": "logo_nero_e_bianco_glaciazione_plasma.webp"
   },
   {
-    "ID": 59,
+    "ID": 60,
     "Nome_Set": "Nero e Bianco - Esplosione Plasma",
     "Totale_Carte": 105,
     "Era": "Nero e Bianco",
@@ -472,7 +480,7 @@
     "Nome_Logo": "logo_nero_e_bianco_esplosione_plasma.webp"
   },
   {
-    "ID": 60,
+    "ID": 61,
     "Nome_Set": "Black & White - Legendary Treasures",
     "Totale_Carte": 140,
     "Era": "Nero e Bianco",
@@ -480,7 +488,7 @@
     "Nome_Logo": "logo_black_and_white_legendary_treasures.png"
   },
   {
-    "ID": 61,
+    "ID": 62,
     "Nome_Set": "Promo stella nera BW",
     "Totale_Carte": 116,
     "Era": "Nero e Bianco",
@@ -488,7 +496,7 @@
     "Nome_Logo": "logo_promo_stella_nera_bw.png"
   },
   {
-    "ID": 62,
+    "ID": 63,
     "Nome_Set": "XY - Benvenuti a Kalos",
     "Totale_Carte": 39,
     "Era": "XY",
@@ -496,7 +504,7 @@
     "Nome_Logo": "logo_xy_benvenuti_a_kalos.png"
   },
   {
-    "ID": 63,
+    "ID": 64,
     "Nome_Set": "XY",
     "Totale_Carte": 146,
     "Era": "XY",
@@ -504,7 +512,7 @@
     "Nome_Logo": "logo_xy.webp"
   },
   {
-    "ID": 64,
+    "ID": 65,
     "Nome_Set": "XY - Fuoco Infernale",
     "Totale_Carte": 109,
     "Era": "XY",
@@ -512,7 +520,7 @@
     "Nome_Logo": "logo_xy_fuoco_infernale.png"
   },
   {
-    "ID": 65,
+    "ID": 66,
     "Nome_Set": "XY - Colpi Furiosi",
     "Totale_Carte": 113,
     "Era": "XY",
@@ -520,7 +528,7 @@
     "Nome_Logo": "logo_xy_colpi_furiosi.png"
   },
   {
-    "ID": 66,
+    "ID": 67,
     "Nome_Set": "XY - Forze Spettrali",
     "Totale_Carte": 122,
     "Era": "XY",
@@ -528,7 +536,7 @@
     "Nome_Logo": "logo_xy_forze_spettrali.webp"
   },
   {
-    "ID": 67,
+    "ID": 68,
     "Nome_Set": "XY - Scontro Primordiale",
     "Totale_Carte": 164,
     "Era": "XY",
@@ -536,7 +544,7 @@
     "Nome_Logo": "logo_xy_scontro_primordiale.webp"
   },
   {
-    "ID": 68,
+    "ID": 69,
     "Nome_Set": "XY - Furie Volanti",
     "Totale_Carte": 110,
     "Era": "XY",
@@ -544,7 +552,7 @@
     "Nome_Logo": "logo_xy_furie_volanti.png"
   },
   {
-    "ID": 69,
+    "ID": 70,
     "Nome_Set": "XY - Antiche Origini",
     "Totale_Carte": 100,
     "Era": "XY",
@@ -552,7 +560,7 @@
     "Nome_Logo": "logo_xy_antiche_origini.webp"
   },
   {
-    "ID": 70,
+    "ID": 71,
     "Nome_Set": "XY - Turboblitz",
     "Totale_Carte": 164,
     "Era": "XY",
@@ -560,7 +568,7 @@
     "Nome_Logo": "logo_xy_turboblitz.webp"
   },
   {
-    "ID": 71,
+    "ID": 72,
     "Nome_Set": "XY - Turbocrash",
     "Totale_Carte": 123,
     "Era": "XY",
@@ -568,7 +576,7 @@
     "Nome_Logo": "logo_xy_turbocrash.png"
   },
   {
-    "ID": 72,
+    "ID": 73,
     "Nome_Set": "Generazioni",
     "Totale_Carte": 115,
     "Era": "XY",
@@ -576,7 +584,7 @@
     "Nome_Logo": "logo_generazioni.png"
   },
   {
-    "ID": 73,
+    "ID": 74,
     "Nome_Set": "XY - Destini Incrociati",
     "Totale_Carte": 125,
     "Era": "XY",
@@ -584,7 +592,7 @@
     "Nome_Logo": "logo_xy_destini_incrociati.png"
   },
   {
-    "ID": 74,
+    "ID": 75,
     "Nome_Set": "XY - Vapori Accesi",
     "Totale_Carte": 116,
     "Era": "XY",
@@ -592,7 +600,7 @@
     "Nome_Logo": "logo_xy_vapori_accesi.webp"
   },
   {
-    "ID": 75,
+    "ID": 76,
     "Nome_Set": "XY - Evoluzioni",
     "Totale_Carte": 113,
     "Era": "XY",
@@ -600,7 +608,7 @@
     "Nome_Logo": "logo_xy_evoluzioni.png"
   },
   {
-    "ID": 76,
+    "ID": 77,
     "Nome_Set": "Promo stella nera XY",
     "Totale_Carte": 213,
     "Era": "XY",
@@ -608,7 +616,7 @@
     "Nome_Logo": "logo_promo_stella_nera_xy.png"
   },
   {
-    "ID": 77,
+    "ID": 78,
     "Nome_Set": "Sole e Luna",
     "Totale_Carte": 163,
     "Era": "Sole e Luna",
@@ -616,7 +624,7 @@
     "Nome_Logo": "logo_sole_e_luna.png"
   },
   {
-    "ID": 78,
+    "ID": 79,
     "Nome_Set": "Sole e Luna - Guardiani Nascenti",
     "Totale_Carte": 169,
     "Era": "Sole e Luna",
@@ -624,7 +632,7 @@
     "Nome_Logo": "logo_sole_e_luna_guardiani_nascenti.webp"
   },
   {
-    "ID": 79,
+    "ID": 80,
     "Nome_Set": "Sole e Luna - Ombre Infuocate",
     "Totale_Carte": 169,
     "Era": "Sole e Luna",
@@ -632,7 +640,7 @@
     "Nome_Logo": "logo_sole_e_luna_ombre_infuocate.webp"
   },
   {
-    "ID": 80,
+    "ID": 81,
     "Nome_Set": "Leggende Iridescenti",
     "Totale_Carte": 78,
     "Era": "Sole e Luna",
@@ -640,7 +648,7 @@
     "Nome_Logo": "logo_leggende_iridescenti.webp"
   },
   {
-    "ID": 81,
+    "ID": 82,
     "Nome_Set": "Sole e Luna - Invasione Scarlatta",
     "Totale_Carte": 124,
     "Era": "Sole e Luna",
@@ -648,7 +656,7 @@
     "Nome_Logo": "logo_sole_e_luna_invasione_scarlatta.png"
   },
   {
-    "ID": 82,
+    "ID": 83,
     "Nome_Set": "Sole e Luna - Ultraprisma",
     "Totale_Carte": 173,
     "Era": "Sole e Luna",
@@ -656,7 +664,7 @@
     "Nome_Logo": "logo_sole_e_luna_ultraprisma.webp"
   },
   {
-    "ID": 83,
+    "ID": 84,
     "Nome_Set": "Sole e Luna - Apocalisse di Luce",
     "Totale_Carte": 146,
     "Era": "Sole e Luna",
@@ -664,7 +672,7 @@
     "Nome_Logo": "logo_sole_e_luna_apocalisse_di_luce.webp"
   },
   {
-    "ID": 84,
+    "ID": 85,
     "Nome_Set": "Sole e Luna - Tempesta Astrale",
     "Totale_Carte": 183,
     "Era": "Sole e Luna",
@@ -672,7 +680,7 @@
     "Nome_Logo": "logo_sole_e_luna_tempesta_astrale.webp"
   },
   {
-    "ID": 85,
+    "ID": 86,
     "Nome_Set": "Trionfo dei Draghi",
     "Totale_Carte": 78,
     "Era": "Sole e Luna",
@@ -680,7 +688,7 @@
     "Nome_Logo": "logo_trionfo_dei_draghi.webp"
   },
   {
-    "ID": 86,
+    "ID": 87,
     "Nome_Set": "Sole e Luna - Tuoni Perduti",
     "Totale_Carte": 236,
     "Era": "Sole e Luna",
@@ -688,7 +696,7 @@
     "Nome_Logo": "logo_sole_e_luna_tuoni_perduti.webp"
   },
   {
-    "ID": 87,
+    "ID": 88,
     "Nome_Set": "Sole e Luna - Gioco di Squadra",
     "Totale_Carte": 196,
     "Era": "Sole e Luna",
@@ -696,7 +704,7 @@
     "Nome_Logo": "logo_sole_e_luna_gioco_di_squadra.webp"
   },
   {
-    "ID": 88,
+    "ID": 89,
     "Nome_Set": "Detective Pikachu",
     "Totale_Carte": 18,
     "Era": "Sole e Luna",
@@ -704,7 +712,7 @@
     "Nome_Logo": "logo_detective_pikachu.webp"
   },
   {
-    "ID": 89,
+    "ID": 90,
     "Nome_Set": "Sole e Luna - Legami Inossidabili",
     "Totale_Carte": 234,
     "Era": "Sole e Luna",
@@ -712,7 +720,7 @@
     "Nome_Logo": "logo_sole_e_luna_legami_inossidabili.webp"
   },
   {
-    "ID": 90,
+    "ID": 91,
     "Nome_Set": "Sole e Luna - Sintonia Mentale",
     "Totale_Carte": 258,
     "Era": "Sole e Luna",
@@ -720,7 +728,7 @@
     "Nome_Logo": "logo_sole_e_luna_sintonia_mentale.webp"
   },
   {
-    "ID": 91,
+    "ID": 92,
     "Nome_Set": "Destino Sfuggente",
     "Totale_Carte": 163,
     "Era": "Sole e Luna",
@@ -728,7 +736,7 @@
     "Nome_Logo": "logo_destino_sfuggente.webp"
   },
   {
-    "ID": 92,
+    "ID": 93,
     "Nome_Set": "Sole e Luna - Eclissi Cosmica",
     "Totale_Carte": 271,
     "Era": "Sole e Luna",
@@ -736,7 +744,7 @@
     "Nome_Logo": "logo_sole_e_luna_eclissi_cosmica.webp"
   },
   {
-    "ID": 93,
+    "ID": 94,
     "Nome_Set": "Promo stella nera SM",
     "Totale_Carte": 249,
     "Era": "Sole e Luna",
@@ -744,7 +752,7 @@
     "Nome_Logo": "logo_promo_stella_nera_sm.png"
   },
   {
-    "ID": 94,
+    "ID": 95,
     "Nome_Set": "Spada e Scudo",
     "Totale_Carte": 216,
     "Era": "Spada e Scudo",
@@ -752,7 +760,7 @@
     "Nome_Logo": "logo_spada_e_scudo.webp"
   },
   {
-    "ID": 95,
+    "ID": 96,
     "Nome_Set": "Spada e Scudo - Fragore Ribelle",
     "Totale_Carte": 209,
     "Era": "Spada e Scudo",
@@ -760,7 +768,7 @@
     "Nome_Logo": "logo_spada_e_scudo_fragore_ribelle.webp"
   },
   {
-    "ID": 96,
+    "ID": 97,
     "Nome_Set": "Spada e Scudo - Fiamme Oscure",
     "Totale_Carte": 201,
     "Era": "Spada e Scudo",
@@ -768,7 +776,7 @@
     "Nome_Logo": "logo_spada_e_scudo_fiamme_oscure.webp"
   },
   {
-    "ID": 97,
+    "ID": 98,
     "Nome_Set": "Futuri Campioni",
     "Totale_Carte": 80,
     "Era": "Spada e Scudo",
@@ -776,7 +784,7 @@
     "Nome_Logo": "logo_futuri_campioni.webp"
   },
   {
-    "ID": 98,
+    "ID": 99,
     "Nome_Set": "Spada e Scudo - Voltaggio Sfolgorante",
     "Totale_Carte": 203,
     "Era": "Spada e Scudo",
@@ -784,7 +792,7 @@
     "Nome_Logo": "logo_spada_e_scudo_voltaggio_sfolgorante.webp"
   },
   {
-    "ID": 99,
+    "ID": 100,
     "Nome_Set": "Destino Splendente",
     "Totale_Carte": 195,
     "Era": "Spada e Scudo",
@@ -792,7 +800,7 @@
     "Nome_Logo": "logo_destino_splendente.webp"
   },
   {
-    "ID": 100,
+    "ID": 101,
     "Nome_Set": "Spada e Scudo - Stili di Lotta",
     "Totale_Carte": 183,
     "Era": "Spada e Scudo",
@@ -800,7 +808,7 @@
     "Nome_Logo": "logo_spada_e_scudo_stili_di_lotta.webp"
   },
   {
-    "ID": 101,
+    "ID": 102,
     "Nome_Set": "Spada e Scudo - Regno Glaciale",
     "Totale_Carte": 233,
     "Era": "Spada e Scudo",
@@ -808,7 +816,7 @@
     "Nome_Logo": "logo_spada_e_scudo_regno_glaciale.webp"
   },
   {
-    "ID": 102,
+    "ID": 103,
     "Nome_Set": "Spada e Scudo - Evoluzioni Eteree",
     "Totale_Carte": 237,
     "Era": "Spada e Scudo",
@@ -816,7 +824,7 @@
     "Nome_Logo": "logo_spada_e_scudo_evoluzioni_eteree.webp"
   },
   {
-    "ID": 103,
+    "ID": 104,
     "Nome_Set": "Spada e Scudo - Colpo Fusione",
     "Totale_Carte": 284,
     "Era": "Spada e Scudo",
@@ -824,7 +832,7 @@
     "Nome_Logo": "logo_spada_e_scudo_colpo_fusione.webp"
   },
   {
-    "ID": 104,
+    "ID": 105,
     "Nome_Set": "Spada e Scudo - Astri Lucenti",
     "Totale_Carte": 216,
     "Era": "Spada e Scudo",
@@ -832,7 +840,7 @@
     "Nome_Logo": "logo_spada_e_scudo_astri_lucenti.webp"
   },
   {
-    "ID": 105,
+    "ID": 106,
     "Nome_Set": "Spada e Scudo - Lucentezza Siderale",
     "Totale_Carte": 246,
     "Era": "Spada e Scudo",
@@ -840,7 +848,7 @@
     "Nome_Logo": "logo_spada_e_scudo_lucentezza_siderale.webp"
   },
   {
-    "ID": 106,
+    "ID": 107,
     "Nome_Set": "Pokémon GO",
     "Totale_Carte": 88,
     "Era": "Spada e Scudo",
@@ -848,7 +856,7 @@
     "Nome_Logo": "logo_pokemon_go.webp"
   },
   {
-    "ID": 107,
+    "ID": 108,
     "Nome_Set": "Spada e Scudo - Origine Perduta",
     "Totale_Carte": 247,
     "Era": "Spada e Scudo",
@@ -856,7 +864,7 @@
     "Nome_Logo": "logo_spada_e_scudo_origine_perduta.webp"
   },
   {
-    "ID": 108,
+    "ID": 109,
     "Nome_Set": "Spada e Scudo - Tempesta Argentata",
     "Totale_Carte": 245,
     "Era": "Spada e Scudo",
@@ -864,7 +872,7 @@
     "Nome_Logo": "logo_spada_e_scudo_tempesta_argentata.webp"
   },
   {
-    "ID": 109,
+    "ID": 110,
     "Nome_Set": "Zenit Regale",
     "Totale_Carte": 230,
     "Era": "Spada e Scudo",
@@ -872,7 +880,7 @@
     "Nome_Logo": "logo_zenit_regale.webp"
   },
   {
-    "ID": 110,
+    "ID": 111,
     "Nome_Set": "Promo stella nera SWSH",
     "Totale_Carte": 305,
     "Era": "Spada e Scudo",
@@ -880,7 +888,7 @@
     "Nome_Logo": "logo_promo_stella_nera_swsh.png"
   },
   {
-    "ID": 111,
+    "ID": 112,
     "Nome_Set": "Scarlatto e Violetto",
     "Totale_Carte": 258,
     "Era": "Scarlatto e Violetto",
@@ -888,7 +896,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto.webp"
   },
   {
-    "ID": 112,
+    "ID": 113,
     "Nome_Set": "Scarlatto e Violetto - Evoluzioni a Paldea",
     "Totale_Carte": 279,
     "Era": "Scarlatto e Violetto",
@@ -896,7 +904,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_evoluzioni_a_paldea.webp"
   },
   {
-    "ID": 113,
+    "ID": 114,
     "Nome_Set": "Scarlatto e Violetto - Ossidiana Infuocata",
     "Totale_Carte": 230,
     "Era": "Scarlatto e Violetto",
@@ -904,7 +912,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_ossidiana_infuocata.webp"
   },
   {
-    "ID": 114,
+    "ID": 115,
     "Nome_Set": "Scarlatto e Violetto - 151",
     "Totale_Carte": 210,
     "Era": "Scarlatto e Violetto",
@@ -912,7 +920,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_151.webp"
   },
   {
-    "ID": 115,
+    "ID": 116,
     "Nome_Set": "Scarlatto e Violetto - Paradosso Temporale",
     "Totale_Carte": 266,
     "Era": "Scarlatto e Violetto",
@@ -920,7 +928,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_paradosso_temporale.webp"
   },
   {
-    "ID": 116,
+    "ID": 117,
     "Nome_Set": "Scarlatto e Violetto - Destino di Paldea",
     "Totale_Carte": 245,
     "Era": "Scarlatto e Violetto",
@@ -928,7 +936,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_destino_di_paldea.webp"
   },
   {
-    "ID": 117,
+    "ID": 118,
     "Nome_Set": "Scarlatto e Violetto - Cronoforze",
     "Totale_Carte": 218,
     "Era": "Scarlatto e Violetto",
@@ -936,7 +944,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_cronoforze.webp"
   },
   {
-    "ID": 118,
+    "ID": 119,
     "Nome_Set": "Scarlatto e Violetto - Crepuscolo Mascherato",
     "Totale_Carte": 226,
     "Era": "Scarlatto e Violetto",
@@ -944,7 +952,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_crepuscolo_mascherato.webp"
   },
   {
-    "ID": 119,
+    "ID": 120,
     "Nome_Set": "Scarlatto e Violetto - Segreto Fiabesco",
     "Totale_Carte": 99,
     "Era": "Scarlatto e Violetto",
@@ -952,7 +960,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_segreto_fiabesco.webp"
   },
   {
-    "ID": 120,
+    "ID": 121,
     "Nome_Set": "Scarlatto e Violetto - Corona Astrale",
     "Totale_Carte": 175,
     "Era": "Scarlatto e Violetto",
@@ -960,7 +968,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_corona_astrale.webp"
   },
   {
-    "ID": 121,
+    "ID": 122,
     "Nome_Set": "Scarlatto e Violetto - Scintille Folgoranti",
     "Totale_Carte": 252,
     "Era": "Scarlatto e Violetto",
@@ -968,7 +976,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_scintille_folgoranti.webp"
   },
   {
-    "ID": 122,
+    "ID": 123,
     "Nome_Set": "Scarlatto e Violetto - Evoluzioni Prismatiche",
     "Totale_Carte": 180,
     "Era": "Scarlatto e Violetto",
@@ -976,7 +984,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_evoluzioni_prismatiche.webp"
   },
   {
-    "ID": 123,
+    "ID": 124,
     "Nome_Set": "Scarlatto e Violetto - Avventure Insieme",
     "Totale_Carte": 190,
     "Era": "Scarlatto e Violetto",
@@ -984,7 +992,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_avventure_insieme.webp"
   },
   {
-    "ID": 124,
+    "ID": 125,
     "Nome_Set": "Scarlatto e Violetto - Rivali Predestinati",
     "Totale_Carte": 244,
     "Era": "Scarlatto e Violetto",
@@ -992,7 +1000,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_rivali_predestinati.webp"
   },
   {
-    "ID": 125,
+    "ID": 126,
     "Nome_Set": "Scarlatto e Violetto - Luce Nera",
     "Totale_Carte": 172,
     "Era": "Scarlatto e Violetto",
@@ -1000,7 +1008,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_luce_nera.webp"
   },
   {
-    "ID": 126,
+    "ID": 127,
     "Nome_Set": "Scarlatto e Violetto - Fuoco Bianco",
     "Totale_Carte": 173,
     "Era": "Scarlatto e Violetto",
@@ -1008,7 +1016,7 @@
     "Nome_Logo": "logo_scarlatto_e_violetto_fuoco_bianco.webp"
   },
   {
-    "ID": 127,
+    "ID": 128,
     "Nome_Set": "Promo stella nera SVP",
     "Totale_Carte": 226,
     "Era": "Scarlatto e Violetto",
@@ -1016,7 +1024,7 @@
     "Nome_Logo": "logo_promo_stella_nera_svp.webp"
   },
   {
-    "ID": 128,
+    "ID": 129,
     "Nome_Set": "Megaevoluzione",
     "Totale_Carte": 188,
     "Era": "Megaevoluzione",
