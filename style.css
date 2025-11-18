@@ -8,14 +8,14 @@ body {
 }
 
 body.light {
-  background-image: url('assets/bg_light.jpeg');
+  background-image: url('assets/bg_light.jpg');
   background-size: cover;
   background-position: center;
   color: #333;
 }
 
 body.dark {
-  background-image: url('assets/bg_dark.jpeg');
+  background-image: url('assets/bg_dark.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -160,6 +160,29 @@ body.dark .set-card {
 .card-item:hover {
   transform: scale(1.05);
 }
+
+/* ===== LOGO ALTERNATIVO SET ===== */
+#set-alt-logo-container {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.set-alt-logo {
+  max-width: 180px;
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+body.dark .set-alt-logo {
+  background: rgba(0,0,0,0.5);
+}
+
 /* Numero carta in alto a sinistra */
 .card-item::before {
   content: attr(data-number);

@@ -38,7 +38,6 @@ async function renderHome() {
   let cardsData = loadCardsState();
   if (!cardsData) cardsData = await loadJSON('cards.json');
 
-  // Raggruppa per era
   const eras = {};
   setsData.forEach(set => {
     if (!eras[set.Era]) eras[set.Era] = [];
@@ -95,7 +94,6 @@ async function renderHome() {
       card.appendChild(info);
       card.appendChild(progress);
 
-      // click -> apri pagina set
       card.onclick = () => {
         window.location.href = `set.html?set=${encodeURIComponent(set.Nome_Set)}`;
       };
@@ -125,6 +123,19 @@ async function renderSet() {
 
   document.getElementById("set-title").textContent = set.Nome_Set;
 
+  // ---- LOGO ALTERNATIVO ----
+  const altLogoBox = document.getElementById("set-alt-logo-container");
+  altLogoBox.innerHTML = "";
+
+  if (set.Logo_Alternativo) {
+    const img = document.createElement("img");
+    img.className = "set-alt-logo";
+    img.src = `img/${set.Logo_Alternativo}`;
+    img.alt = "Logo del set";
+    altLogoBox.appendChild(img);
+  }
+
+  // ---- CARTE ----
   const cardsContainer = document.getElementById("cards-container");
   cardsContainer.innerHTML = "";
 
@@ -133,7 +144,7 @@ async function renderSet() {
     cardDiv.className = "card-item";
     if (c.Posseduta) cardDiv.classList.add("posseduta");
     cardDiv.textContent = c.Nome_Carta;
-    cardDiv.setAttribute("data-number", c.Numero_Carta); // mostra numero
+    cardDiv.setAttribute("data-number", c.Numero_Carta);
 
     cardDiv.onclick = () => {
       c.Posseduta = !c.Posseduta;
