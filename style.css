@@ -246,6 +246,10 @@ body.dark .set-alt-logo {
   border-radius: 6px;
   margin-top: 4px;
   color: #fff; /* testo bianco per contrasto */
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal; /* permette al testo di andare a capo */
+  overflow: visible;   /* evita che il testo venga tagliato */
 }
 
 .card-name {
@@ -293,16 +297,17 @@ body.dark .set-alt-logo {
   }
   .card-caption {
     width: 92px;
+    overflow: visible; /* fondamentale per vedere il nome */
   }
   .card-name {
-    font-size: 12px;
-    word-wrap: break-word;
+    font-size: 11px;
     white-space: normal;
+    word-wrap: break-word;
   }
   .card-number {
-    font-size: 11px;
-    word-wrap: break-word;
+    font-size: 10px;
     white-space: normal;
+    word-wrap: break-word;
   }
 }
 
