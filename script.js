@@ -160,71 +160,74 @@ async function renderSet() {
     wrap.appendChild(gif);
     altBox.appendChild(wrap);
   }
-
+}
   // CARTE
-  const container = document.getElementById("cards-container");
-  container.innerHTML = "";
+const container = document.getElementById("cards-container");
+container.innerHTML = "";
 
-  const cards = cardsData.filter(c => c.ID_Set === set.ID);
+const cards = cardsData.filter(c => c.ID_Set === set.ID);
 
-  cards.forEach(c => {
-    const wrap = document.createElement("div");
-    wrap.className = "card-wrap";
+cards.forEach(c => {
+  const wrap = document.createElement("div");
+  wrap.className = "card-wrap";
 
-    const card = document.createElement("div");
-    card.className = "card-item";
+  const card = document.createElement("div");
+  card.className = "card-item";
 
-    // Box immagine
-    const box = document.createElement("div");
-    box.className = "card-img-box";
+  // Box immagine
+  const box = document.createElement("div");
+  box.className = "card-img-box";
 
-    const img = document.createElement("img");
-    img.className = "card-img";
-    img.alt = c.Nome_Carta;
+  const img = document.createElement("img");
+  img.className = "card-img";
+  img.alt = c.Nome_Carta;
 
-if (c.Posseduta === false) {
+  if (c.Posseduta === false) {
     // Carta non posseduta → immagine "card_false.png"
     img.src = "cardsimg/card_false.png";
     img.onerror = () => { img.style.display = 'none'; };
     box.appendChild(img);
-} else {
+  } else {
     if (c.Logo_Carta) {
-        // Carta posseduta con immagine disponibile
-        img.src = `cardsimg/${c.Logo_Carta}`;
-        img.onerror = () => { 
-            img.style.display = 'none'; 
-            box.classList.add('card-placeholder-green'); 
-        };
-        box.appendChild(img);
+      // Carta posseduta con immagine disponibile
+      img.src = `cardsimg/${c.Logo_Carta}`;
+      img.onerror = () => { 
+        img.style.display = 'none'; 
+        box.classList.add('card-placeholder-green'); 
+      };
+      box.appendChild(img);
     } else {
-        // Carta posseduta senza immagine → riquadro scuro
-        const placeholder = document.createElement('div');
-        placeholder.style.width = '100%';
-        placeholder.style.height = '100%';
-        placeholder.style.background = '#444'; // colore scuro neutro Pokémon style
-        box.appendChild(placeholder);
+      // Carta posseduta senza immagine → riquadro scuro
+      const placeholder = document.createElement('div');
+      placeholder.style.width = '100%';
+      placeholder.style.height = '100%';
+      placeholder.style.background = '#444'; // colore scuro neutro Pokémon style
+      placeholder.style.display = 'flex';
+      placeholder.style.alignItems = 'center';
+      placeholder.style.justifyContent = 'center';
+      box.appendChild(placeholder);
     }
-}
+  }
 
-    // Caption
-    const caption = document.createElement("div");
-    caption.className = "card-caption";
+  // Caption
+  const caption = document.createElement("div");
+  caption.className = "card-caption";
 
-    const name = document.createElement("div");
-    name.className = "card-name";
-    name.textContent = c.Nome_Carta;
+  const name = document.createElement("div");
+  name.className = "card-name";
+  name.textContent = c.Nome_Carta;
 
-    const number = document.createElement("div");
-    number.className = "card-number";
-    number.textContent = c.Numero_Carta;
+  const number = document.createElement("div");
+  number.className = "card-number";
+  number.textContent = c.Numero_Carta;
 
-    caption.appendChild(name);
-    caption.appendChild(number);
+  caption.appendChild(name);
+  caption.appendChild(number);
 
-    card.appendChild(box);
-    card.appendChild(caption);
+  card.appendChild(box);
+  card.appendChild(caption);
 
-    wrap.appendChild(card);
-    container.appendChild(wrap);
-  });
-}
+  wrap.appendChild(card);
+  container.appendChild(wrap);
+});
+
