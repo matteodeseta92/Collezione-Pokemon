@@ -13,7 +13,6 @@ async function loadJSON(file) {
 function saveCardsState(cards) {
   localStorage.setItem("cardsState", JSON.stringify(cards));
 }
-
 function loadCardsState() {
   const data = localStorage.getItem("cardsState");
   return data ? JSON.parse(data) : null;
@@ -36,7 +35,9 @@ function initThemeToggle() {
   });
 }
 
-// ===== HOME PAGE =====
+/* ============================================================
+   ======================= HOME PAGE ===========================
+   ============================================================ */
 async function renderHome() {
   initThemeToggle();
 
@@ -64,8 +65,8 @@ async function renderHome() {
     gif.src = "assets/home_pikachu.gif";
     gif.className = "tiny-gif";
     gif.alt = "";
-
     title.appendChild(gif);
+
     title.appendChild(document.createTextNode(" " + era));
     eraBox.appendChild(title);
 
@@ -79,7 +80,8 @@ async function renderHome() {
       const img = document.createElement("img");
       img.src = `assets/${set.Nome_Logo}`;
       img.alt = set.Nome_Set;
-      img.onerror = () => { img.style.display = 'none'; };
+      img.className = "set-logo-small";   // ⭐ LOGHI PICCOLI
+      img.onerror = () => img.style.display = "none";
 
       const name = document.createElement("div");
       name.textContent = set.Nome_Set;
@@ -92,11 +94,10 @@ async function renderHome() {
 
       const possedute = cardsData.filter(c => c.ID_Set === set.ID && c.Posseduta).length;
       const totale = set.Totale_Carte || 0;
-      const perc = totale ? Math.round((possedute / totale) * 100) : 0;
 
       const bar = document.createElement("div");
       bar.className = "progress-bar";
-      bar.style.width = perc + "%";
+      bar.style.width = (totale ? (possedute / totale) * 100 : 0) + "%";
 
       const barText = document.createElement("div");
       barText.className = "progress-text";
@@ -119,7 +120,9 @@ async function renderHome() {
   }
 }
 
-// ===== SET PAGE =====
+/* ============================================================
+   =======================   SET PAGE  =========================
+   ============================================================ */
 async function renderSet() {
   initThemeToggle();
 
@@ -131,100 +134,89 @@ async function renderSet() {
   if (!cardsData) cardsData = await loadJSON('cards.json');
 
   const set = setsData.find(s => s.Nome_Set === setName);
-  if (!set) {
-    document.getElementById("content").innerHTML = "<p>Set non trovato!</p>";
-    return;
-  }
+  if (!set) return;
 
   document.getElementById("set-title").textContent = set.Nome_Set;
 
-  // ---- LOGO ALTERNATIVO + GIF ----
-  const altLogoBox = document.getElementById("set-alt-logo-container");
-  altLogoBox.innerHTML = "";
+  // LOGO ALTERNATIVO
+  const altBox = document.getElementById("set-alt-logo-container");
+  altBox.innerHTML = "";
 
-  const firstCardWithLogo = cardsData.find(c => c.ID_Set === set.ID && c.Logo_Alternativo);
-
-  if (firstCardWithLogo?.Logo_Alternativo) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "alt-logo-wrapper";
+  const firstLogo = cardsData.find(c => c.ID_Set === set.ID && c.Logo_Alternativo);
+  if (firstLogo?.Logo_Alternativo) {
+    const wrap = document.createElement("div");
+    wrap.className = "alt-logo-wrapper";
 
     const img = document.createElement("img");
     img.className = "set-alt-logo";
-    img.src = `img/${firstCardWithLogo.Logo_Alternativo}`;
-    img.alt = `Logo alternativo ${set.Nome_Set}`;
-    img.onerror = () => { img.style.display = 'none'; };
+    img.src = `img/${firstLogo.Logo_Alternativo}`;
+    img.onerror = () => img.style.display = "none";
 
     const gif = document.createElement("img");
     gif.src = "assets/sets_pikachu.gif";
     gif.className = "tiny-gif-set";
 
-    wrapper.appendChild(img);
-    wrapper.appendChild(gif);
-    altLogoBox.appendChild(wrapper);
+    wrap.appendChild(img);
+    wrap.appendChild(gif);
+    altBox.appendChild(wrap);
   }
 
-  // ---- CARTE ----
-  const cardsContainer = document.getElementById("cards-container");
-  cardsContainer.innerHTML = "";
+  // CARTE
+  const container = document.getElementById("cards-container");
+  container.innerHTML = "";
 
-  const cardsOfSet = cardsData.filter(c => c.ID_Set === set.ID);
+  const cards = cardsData.filter(c => c.ID_Set === set.ID);
 
-  cardsOfSet.forEach(c => {
-    const cardWrap = document.createElement("div");
-    cardWrap.className = "card-wrap";
+  cards.forEach(c => {
+    const wrap = document.createElement("div");
+    wrap.className = "card-wrap";
 
-    const cardDiv = document.createElement("div");
-    cardDiv.className = "card-item";
+    const card = document.createElement("div");
+    card.className = "card-item";
 
-    // ---- IMMAGINE ----
-    const imgBox = document.createElement("div");
-    imgBox.className = "card-img-box";
+    // Box immagine
+    const box = document.createElement("div");
+    box.className = "card-img-box";
 
-    const imgEl = document.createElement("img");
-    imgEl.className = "card-img";
-    imgEl.alt = c.Nome_Carta;
+    const img = document.createElement("img");
+    img.className = "card-img";
+    img.alt = c.Nome_Carta;
 
     if (c.Posseduta === false) {
-      imgEl.src = `cardsimg/card_false.png`;
-      imgBox.appendChild(imgEl);
+      img.src = `cardsimg/card_false.png`;
+      box.appendChild(img);
+
+    } else if (c.Logo_Carta && c.Logo_Carta !== "none") {
+      img.src = `cardsimg/${c.Logo_Carta}`;
+      img.onerror = () => {
+        img.style.display = "none";
+        box.classList.add("card-placeholder-green");
+      };
+      box.appendChild(img);
+
     } else {
-      if (c.Logo_Carta && c.Logo_Carta !== "none") {
-        imgEl.src = `cardsimg/${c.Logo_Carta}`;
-        imgEl.onerror = () => {
-          imgEl.style.display = "none";
-          imgBox.classList.add("card-placeholder-green");
-        };
-        imgBox.appendChild(imgEl);
-      } else {
-        imgBox.classList.add("card-placeholder-green");
-      }
+      box.classList.add("card-placeholder-green");
     }
 
-    // ---- CAPTION ----
+    // Caption
     const caption = document.createElement("div");
     caption.className = "card-caption";
 
-    const nameLine = document.createElement("div");
-    nameLine.className = "card-name";
-    nameLine.textContent = c.Nome_Carta;
+    const name = document.createElement("div");
+    name.className = "card-name";
+    name.textContent = c.Nome_Carta;
 
-    const numberLine = document.createElement("div");
-    numberLine.className = "card-number";
-    numberLine.textContent = c.Numero_Carta;
+    const number = document.createElement("div");
+    number.className = "card-number";
+    number.textContent = c.Numero_Carta;
 
-    caption.appendChild(nameLine);
-    caption.appendChild(numberLine);
+    caption.appendChild(name);
+    caption.appendChild(number);
 
-    cardDiv.appendChild(imgBox);
-    cardDiv.appendChild(caption);
+    card.appendChild(box);
+    card.appendChild(caption);
 
-    // solo effetto click visivo
-    cardDiv.addEventListener("click", () => {
-      cardDiv.classList.add("card-clicked");
-      setTimeout(() => cardDiv.classList.remove("card-clicked"), 120);
-    });
-
-    cardWrap.appendChild(cardDiv);
-    cardsContainer.appendChild(cardWrap);
+    wrap.appendChild(card);
+    container.appendChild(wrap);
   });
 }
