@@ -183,11 +183,13 @@ async function renderSet() {
     img.alt = c.Nome_Carta;
 
     if (c.Posseduta === false) {
+    // Carta non posseduta → immagine "card_false.png"
     imgEl.src = "cardsimg/card_false.png";
     imgEl.onerror = () => { imgEl.style.display = 'none'; };
     imgBox.appendChild(imgEl);
 } else {
     if (c.Logo_Carta) {
+        // Carta posseduta con immagine disponibile
         imgEl.src = `cardsimg/${c.Logo_Carta}`;
         imgEl.onerror = () => { 
             imgEl.style.display = 'none'; 
@@ -195,7 +197,7 @@ async function renderSet() {
         };
         imgBox.appendChild(imgEl);
     } else {
-        // nessuna immagine fornita ma posseduta -> riquadro stesso size
+        // Carta posseduta senza immagine → riquadro scuro
         const placeholder = document.createElement('div');
         placeholder.style.width = '100%';
         placeholder.style.height = '100%';
