@@ -55,8 +55,6 @@ header h1 {
   width: auto;
   image-rendering: auto;
 }
-
-
 .tiny-gif-set {
   height: 40px;
   margin-left: 10px;
@@ -97,15 +95,15 @@ body.dark .era-container {
   margin: 10px 0;
   border: 2px solid #ffcb05;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 body.dark .set-card {
   background: #222;
 }
 .set-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
-
 .set-info {
   display: flex;
   align-items: center;
@@ -113,6 +111,10 @@ body.dark .set-card {
 }
 .set-info img {
   height: 50px;
+}
+.set-info div {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* ===== Progress ===== */
@@ -128,6 +130,7 @@ body.dark .set-card {
 .progress-bar {
   height: 100%;
   background: #4caf50;
+  transition: width 0.3s;
 }
 .progress-text {
   position: absolute;
@@ -162,53 +165,105 @@ body.dark .set-card {
   object-fit: contain;
   border-radius: 8px;
   padding: 8px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.85);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 body.dark .set-alt-logo {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
 }
 
-/* ===== Carte ===== */
+/* ===== Carte (nuovo layout: immagine sopra, caption sotto) ===== */
 .cards-container {
   margin: 20px auto;
   max-width: 900px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
 }
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* dimensione riquadro immagine */
 .card-item {
   width: 100px;
-  height: 140px;
+  /* total card block includes caption; set uniform height for image + caption */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* box immagine */
+.card-img-box {
+  width: 100px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffdddd;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-  position: relative;
-  padding: 5px;
-  box-sizing: border-box;
+  background: #ffdddd; /* default non posseduta (rosso) */
 }
-.card-item.posseduta {
+
+/* immagine della carta */
+.card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* riquadro verde placeholder quando posseduta ma senza immagine */
+.card-placeholder-green {
+  background: #4caf50 !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* quando la carta è posseduta ma non c'è immagine, teniamo lo stesso look verde.
+   se vuoi, puoi aggiungere bordi o icone qui */
+.card-item.posseduta .card-img-box {
   background: #4caf50;
 }
-.card-item:hover {
-  transform: scale(1.05);
+
+/* Caption sotto immagine: nome e numero */
+.card-caption {
+  width: 100px;
+  background: rgba(0,0,0,0.0);
+  text-align: center;
+  padding: 6px 4px;
+  box-sizing: border-box;
 }
-.card-item::before {
-  content: attr(data-number);
-  position: absolute;
-  top: 5px;
-  left: 5px;
+.card-name {
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+}
+.card-number {
+  font-size: 11px;
+  color: #666;
+}
+
+/* quando posseduta e non immagine, colore testo contrastato */
+.card-item.posseduta .card-name,
+.card-item.posseduta .card-number {
   color: #fff;
+}
+
+/* effetto click visuale (non modifica dati) */
+.card-clicked {
+  transform: scale(0.98);
 }
 
 /* ===== Bottone home ===== */
@@ -225,4 +280,13 @@ body.dark .set-alt-logo {
 }
 .home-btn:hover {
   background: #ff4d4d;
+}
+
+/* Responsive: su schermi piccoli rimpicciolisce leggermente le card */
+@media (max-width: 420px) {
+  .card-item { width: 86px; }
+  .card-img-box { width: 86px; height: 104px; }
+  .card-caption { width: 86px; }
+  .card-name { font-size: 11px; }
+  .card-number { font-size: 10px; }
 }

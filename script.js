@@ -21,12 +21,14 @@ function loadCardsState() {
 // ===== THEME TOGGLE =====
 function initThemeToggle() {
   const toggle = document.getElementById("themeToggle");
+  if (!toggle) return;
   const current = localStorage.getItem("theme") || "light";
+  document.body.classList.remove("light", "dark");
   document.body.classList.add(current);
   toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-    const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+    const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(newTheme);
     localStorage.setItem("theme", newTheme);
   });
 }
@@ -54,10 +56,11 @@ async function renderHome() {
     const title = document.createElement("div");
     title.className = "era-title";
 
-    // GIF piccola accanto al titolo
+    // GIF piccola accanto al titolo (se esiste)
     const gif = document.createElement("img");
     gif.src = "assets/home_pikachu.gif";
     gif.className = "tiny-gif";
+    gif.alt = "";
 
     title.appendChild(gif);
     title.appendChild(document.createTextNode(" " + era));
@@ -73,6 +76,7 @@ async function renderHome() {
       const img = document.createElement("img");
       img.src = `assets/${set.Nome_Logo}`;
       img.alt = set.Nome_Set;
+      img.onerror = () => { img.style.display = 'none'; }; // se mancano file
 
       const name = document.createElement("div");
       name.textContent = set.Nome_Set;
@@ -134,7 +138,7 @@ async function renderSet() {
   const altLogoBox = document.getElementById("set-alt-logo-container");
   altLogoBox.innerHTML = "";
 
-  // PRENDI LOGO ALTERNATIVO DALLE CARTE
+  // Prendiamo il primo logo alternativo disponibile dalle cards del set
   const firstCardWithLogo = cardsData.find(c => c.ID_Set === set.ID && c.Logo_Alternativo);
 
   if (firstCardWithLogo?.Logo_Alternativo) {
@@ -144,11 +148,13 @@ async function renderSet() {
     const img = document.createElement("img");
     img.className = "set-alt-logo";
     img.src = `img/${firstCardWithLogo.Logo_Alternativo}`;
-    img.alt = "Logo del set";
+    img.alt = `Logo alternativo ${set.Nome_Set}`;
+    img.onerror = () => { img.style.display = 'none'; };
 
     const gif = document.createElement("img");
     gif.src = "assets/sets_pikachu.gif";
     gif.className = "tiny-gif-set";
+    gif.alt = "";
 
     wrapper.appendChild(img);
     wrapper.appendChild(gif);
@@ -159,19 +165,75 @@ async function renderSet() {
   const cardsContainer = document.getElementById("cards-container");
   cardsContainer.innerHTML = "";
 
-  cardsData.filter(c => c.ID_Set === set.ID).forEach(c => {
+  // Filtra e ordina per Numero_Carta (se vuoi), qui lascio ordine come nel JSON
+  const cardsOfSet = cardsData.filter(c => c.ID_Set === set.ID);
+
+  cardsOfSet.forEach(c => {
+    const cardWrap = document.createElement("div");
+    cardWrap.className = "card-wrap";
+
     const cardDiv = document.createElement("div");
     cardDiv.className = "card-item";
-    if (c.Posseduta) cardDiv.classList.add("posseduta");
-    cardDiv.textContent = c.Nome_Carta;
-    cardDiv.setAttribute("data-number", c.Numero_Carta);
 
-    cardDiv.onclick = () => {
-      c.Posseduta = !c.Posseduta;
-      cardDiv.classList.toggle("posseduta");
-      saveCardsState(cardsData);
-    };
+    // ELEMENTO IMMAGINE o placeholder
+    const imgBox = document.createElement("div");
+    imgBox.className = "card-img-box";
 
-    cardsContainer.appendChild(cardDiv);
+    const imgEl = document.createElement("img");
+    imgEl.className = "card-img";
+    imgEl.alt = c.Nome_Carta;
+
+    // Logica immagine:
+    // - se Posseduta === false -> mostra cardsimg/card_false.png
+    // - else se Posseduta === true && Logo_Carta presente -> mostra cardsimg/{Logo_Carta}
+    // - else se Posseduta === true && Logo_Carta vuoto -> mostra box verde CSS (non immagine)
+    if (c.Posseduta === false) {
+      imgEl.src = `cardsimg/card_false.png`;
+      imgEl.onerror = () => { imgEl.style.display = 'none'; };
+      imgBox.appendChild(imgEl);
+    } else {
+      // Posseduta === true (o truthy)
+      if (c.Logo_Carta) {
+        imgEl.src = `cardsimg/${c.Logo_Carta}`;
+        imgEl.onerror = () => { 
+          // se l'immagine non esiste, rimaniamo con il riquadro verde
+          imgEl.style.display = 'none';
+          imgBox.classList.add('card-placeholder-green');
+        };
+        imgBox.appendChild(imgEl);
+      } else {
+        // nessuna immagine fornita ma posseduta -> mostra riquadro verde
+        imgBox.classList.add('card-placeholder-green');
+      }
+    }
+
+    // CAPTION (nome + numero) sotto l'immagine
+    const caption = document.createElement("div");
+    caption.className = "card-caption";
+    const nameLine = document.createElement("div");
+    nameLine.className = "card-name";
+    nameLine.textContent = c.Nome_Carta;
+    const numberLine = document.createElement("div");
+    numberLine.className = "card-number";
+    numberLine.textContent = c.Numero_Carta;
+
+    caption.appendChild(nameLine);
+    caption.appendChild(numberLine);
+
+    // compose
+    cardDiv.appendChild(imgBox);
+    cardDiv.appendChild(caption);
+
+    // Non cambiamo stato al click (richiesta): manteniamo possibile futura estensione,
+    // ma al momento il click non altera lo stato. Possiamo aggiungere un tooltip o
+    // un'azione futura qui. Per ora mostriamo un piccolo focus visivo al click.
+    cardDiv.addEventListener('click', (e) => {
+      // effetto visuale momentaneo (non modifica dati)
+      cardDiv.classList.add('card-clicked');
+      setTimeout(() => cardDiv.classList.remove('card-clicked'), 120);
+    });
+
+    cardWrap.appendChild(cardDiv);
+    cardsContainer.appendChild(cardWrap);
   });
 }
