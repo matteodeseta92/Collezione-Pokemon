@@ -1,4 +1,4 @@
-// ===== Funzioni comuni ===== 
+// ===== Funzioni comuni =====
 async function loadJSON(file) {
   try {
     const res = await fetch(file);
@@ -13,6 +13,7 @@ async function loadJSON(file) {
 function saveCardsState(cards) {
   localStorage.setItem("cardsState", JSON.stringify(cards));
 }
+
 function loadCardsState() {
   const data = localStorage.getItem("cardsState");
   return data ? JSON.parse(data) : null;
@@ -22,9 +23,11 @@ function loadCardsState() {
 function initThemeToggle() {
   const toggle = document.getElementById("themeToggle");
   if (!toggle) return;
+
   const current = localStorage.getItem("theme") || "light";
   document.body.classList.remove("light", "dark");
   document.body.classList.add(current);
+
   toggle.addEventListener("click", () => {
     const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
     document.body.classList.remove("light", "dark");
@@ -36,6 +39,7 @@ function initThemeToggle() {
 // ===== HOME PAGE =====
 async function renderHome() {
   initThemeToggle();
+
   const setsData = await loadJSON('sets.json');
   let cardsData = loadCardsState();
   if (!cardsData) cardsData = await loadJSON('cards.json');
@@ -118,10 +122,11 @@ async function renderHome() {
 // ===== SET PAGE =====
 async function renderSet() {
   initThemeToggle();
+
   const urlParams = new URLSearchParams(window.location.search);
   const setName = urlParams.get('set');
-  const setsData = await loadJSON('sets.json');
 
+  const setsData = await loadJSON('sets.json');
   let cardsData = loadCardsState();
   if (!cardsData) cardsData = await loadJSON('cards.json');
 
@@ -152,7 +157,6 @@ async function renderSet() {
     const gif = document.createElement("img");
     gif.src = "assets/sets_pikachu.gif";
     gif.className = "tiny-gif-set";
-    gif.alt = "";
 
     wrapper.appendChild(img);
     wrapper.appendChild(gif);
@@ -172,6 +176,7 @@ async function renderSet() {
     const cardDiv = document.createElement("div");
     cardDiv.className = "card-item";
 
+    // ---- IMMAGINE ----
     const imgBox = document.createElement("div");
     imgBox.className = "card-img-box";
 
@@ -179,27 +184,23 @@ async function renderSet() {
     imgEl.className = "card-img";
     imgEl.alt = c.Nome_Carta;
 
-    // --- LOGICA IMMAGINI ---
     if (c.Posseduta === false) {
       imgEl.src = `cardsimg/card_false.png`;
-      imgEl.onerror = () => { imgEl.style.display = 'none'; };
       imgBox.appendChild(imgEl);
-
     } else {
       if (c.Logo_Carta && c.Logo_Carta !== "none") {
         imgEl.src = `cardsimg/${c.Logo_Carta}`;
         imgEl.onerror = () => {
-          imgEl.style.display = 'none';
-          imgBox.classList.add('card-placeholder-green');
+          imgEl.style.display = "none";
+          imgBox.classList.add("card-placeholder-green");
         };
         imgBox.appendChild(imgEl);
-
       } else {
-        imgBox.classList.add('card-placeholder-green');
+        imgBox.classList.add("card-placeholder-green");
       }
     }
 
-    // CAPTION (nome + numero)
+    // ---- CAPTION ----
     const caption = document.createElement("div");
     caption.className = "card-caption";
 
@@ -217,10 +218,10 @@ async function renderSet() {
     cardDiv.appendChild(imgBox);
     cardDiv.appendChild(caption);
 
-    // effetto click (non modifica dati)
-    cardDiv.addEventListener('click', () => {
-      cardDiv.classList.add('card-clicked');
-      setTimeout(() => cardDiv.classList.remove('card-clicked'), 120);
+    // solo effetto click visivo
+    cardDiv.addEventListener("click", () => {
+      cardDiv.classList.add("card-clicked");
+      setTimeout(() => cardDiv.classList.remove("card-clicked"), 120);
     });
 
     cardWrap.appendChild(cardDiv);
