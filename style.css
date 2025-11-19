@@ -241,9 +241,11 @@ body.dark .set-alt-logo {
   width: 100px;
   text-align: center;
   padding: 5px 3px;
-  background: rgba(0,0,0,0.05); /* piccolo riquadro leggibile sotto immagine */
-  border-radius: 4px;
+  background: #222; /* riquadro più scuro */
+  border: 2px solid #ffcb05; /* bordo giallo Pokémon */
+  border-radius: 6px;
   margin-top: 4px;
+  color: #fff; /* testo bianco per contrasto */
 }
 
 .card-name {

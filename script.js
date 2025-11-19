@@ -183,20 +183,26 @@ async function renderSet() {
     img.alt = c.Nome_Carta;
 
     if (c.Posseduta === false) {
-      img.src = `cardsimg/card_false.png`;
-      box.appendChild(img);
-
-    } else if (c.Logo_Carta && c.Logo_Carta !== "none") {
-      img.src = `cardsimg/${c.Logo_Carta}`;
-      img.onerror = () => {
-        img.style.display = "none";
-        box.classList.add("card-placeholder-green");
-      };
-      box.appendChild(img);
-
+    imgEl.src = "cardsimg/card_false.png";
+    imgEl.onerror = () => { imgEl.style.display = 'none'; };
+    imgBox.appendChild(imgEl);
+} else {
+    if (c.Logo_Carta) {
+        imgEl.src = `cardsimg/${c.Logo_Carta}`;
+        imgEl.onerror = () => { 
+            imgEl.style.display = 'none'; 
+            imgBox.classList.add('card-placeholder-green'); 
+        };
+        imgBox.appendChild(imgEl);
     } else {
-      box.classList.add("card-placeholder-green");
+        // nessuna immagine fornita ma posseduta -> riquadro stesso size
+        const placeholder = document.createElement('div');
+        placeholder.style.width = '100%';
+        placeholder.style.height = '100%';
+        placeholder.style.background = '#444'; // colore scuro neutro Pokémon style
+        imgBox.appendChild(placeholder);
     }
+}
 
     // Caption
     const caption = document.createElement("div");
