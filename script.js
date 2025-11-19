@@ -182,27 +182,27 @@ async function renderSet() {
     img.className = "card-img";
     img.alt = c.Nome_Carta;
 
-    if (c.Posseduta === false) {
+if (c.Posseduta === false) {
     // Carta non posseduta → immagine "card_false.png"
-    imgEl.src = "cardsimg/card_false.png";
-    imgEl.onerror = () => { imgEl.style.display = 'none'; };
-    imgBox.appendChild(imgEl);
+    img.src = "cardsimg/card_false.png";
+    img.onerror = () => { img.style.display = 'none'; };
+    box.appendChild(img);
 } else {
     if (c.Logo_Carta) {
         // Carta posseduta con immagine disponibile
-        imgEl.src = `cardsimg/${c.Logo_Carta}`;
-        imgEl.onerror = () => { 
-            imgEl.style.display = 'none'; 
-            imgBox.classList.add('card-placeholder-green'); 
+        img.src = `cardsimg/${c.Logo_Carta}`;
+        img.onerror = () => { 
+            img.style.display = 'none'; 
+            box.classList.add('card-placeholder-green'); 
         };
-        imgBox.appendChild(imgEl);
+        box.appendChild(img);
     } else {
         // Carta posseduta senza immagine → riquadro scuro
         const placeholder = document.createElement('div');
         placeholder.style.width = '100%';
         placeholder.style.height = '100%';
         placeholder.style.background = '#444'; // colore scuro neutro Pokémon style
-        imgBox.appendChild(placeholder);
+        box.appendChild(placeholder);
     }
 }
 
