@@ -56,7 +56,6 @@ async function renderHome() {
     const title = document.createElement("div");
     title.className = "era-title";
 
-    // GIF piccola accanto al titolo (se esiste)
     const gif = document.createElement("img");
     gif.src = "assets/home_pikachu.gif";
     gif.className = "tiny-gif";
@@ -76,7 +75,7 @@ async function renderHome() {
       const img = document.createElement("img");
       img.src = `assets/${set.Nome_Logo}`;
       img.alt = set.Nome_Set;
-      img.onerror = () => { img.style.display = 'none'; }; // se mancano file
+      img.onerror = () => { img.style.display = 'none'; };
 
       const name = document.createElement("div");
       name.textContent = set.Nome_Set;
@@ -138,7 +137,6 @@ async function renderSet() {
   const altLogoBox = document.getElementById("set-alt-logo-container");
   altLogoBox.innerHTML = "";
 
-  // Prendiamo il primo logo alternativo disponibile dalle cards del set
   const firstCardWithLogo = cardsData.find(c => c.ID_Set === set.ID && c.Logo_Alternativo);
 
   if (firstCardWithLogo?.Logo_Alternativo) {
@@ -165,7 +163,6 @@ async function renderSet() {
   const cardsContainer = document.getElementById("cards-container");
   cardsContainer.innerHTML = "";
 
-  // Filtra e ordina per Numero_Carta (se vuoi), qui lascio ordine come nel JSON
   const cardsOfSet = cardsData.filter(c => c.ID_Set === set.ID);
 
   cardsOfSet.forEach(c => {
@@ -175,7 +172,6 @@ async function renderSet() {
     const cardDiv = document.createElement("div");
     cardDiv.className = "card-item";
 
-    // ELEMENTO IMMAGINE o placeholder
     const imgBox = document.createElement("div");
     imgBox.className = "card-img-box";
 
@@ -183,36 +179,34 @@ async function renderSet() {
     imgEl.className = "card-img";
     imgEl.alt = c.Nome_Carta;
 
-    // Logica immagine:
-    // - se Posseduta === false -> mostra cardsimg/card_false.png
-    // - else se Posseduta === true && Logo_Carta presente -> mostra cardsimg/{Logo_Carta}
-    // - else se Posseduta === true && Logo_Carta vuoto -> mostra box verde CSS (non immagine)
+    // --- LOGICA IMMAGINI ---
     if (c.Posseduta === false) {
       imgEl.src = `cardsimg/card_false.png`;
       imgEl.onerror = () => { imgEl.style.display = 'none'; };
       imgBox.appendChild(imgEl);
+
     } else {
-      // Posseduta === true (o truthy)
-      if (c.Logo_Carta) {
+      if (c.Logo_Carta && c.Logo_Carta !== "none") {
         imgEl.src = `cardsimg/${c.Logo_Carta}`;
-        imgEl.onerror = () => { 
-          // se l'immagine non esiste, rimaniamo con il riquadro verde
+        imgEl.onerror = () => {
           imgEl.style.display = 'none';
           imgBox.classList.add('card-placeholder-green');
         };
         imgBox.appendChild(imgEl);
+
       } else {
-        // nessuna immagine fornita ma posseduta -> mostra riquadro verde
         imgBox.classList.add('card-placeholder-green');
       }
     }
 
-    // CAPTION (nome + numero) sotto l'immagine
+    // CAPTION (nome + numero)
     const caption = document.createElement("div");
     caption.className = "card-caption";
+
     const nameLine = document.createElement("div");
     nameLine.className = "card-name";
     nameLine.textContent = c.Nome_Carta;
+
     const numberLine = document.createElement("div");
     numberLine.className = "card-number";
     numberLine.textContent = c.Numero_Carta;
@@ -220,15 +214,11 @@ async function renderSet() {
     caption.appendChild(nameLine);
     caption.appendChild(numberLine);
 
-    // compose
     cardDiv.appendChild(imgBox);
     cardDiv.appendChild(caption);
 
-    // Non cambiamo stato al click (richiesta): manteniamo possibile futura estensione,
-    // ma al momento il click non altera lo stato. Possiamo aggiungere un tooltip o
-    // un'azione futura qui. Per ora mostriamo un piccolo focus visivo al click.
-    cardDiv.addEventListener('click', (e) => {
-      // effetto visuale momentaneo (non modifica dati)
+    // effetto click (non modifica dati)
+    cardDiv.addEventListener('click', () => {
       cardDiv.classList.add('card-clicked');
       setTimeout(() => cardDiv.classList.remove('card-clicked'), 120);
     });
