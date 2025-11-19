@@ -285,22 +285,24 @@ body.dark .set-alt-logo {
 /* Responsive */
 @media (max-width: 420px) {
   .card-item {
-    width: 86px;
+    width: 92px;
   }
   .card-img-box {
-    width: 86px;
-    height: 104px;
+    width: 92px;
+    height: 112px;
   }
   .card-caption {
-    width: 86px;
+    width: 92px;
   }
   .card-name {
-    font-size: 11px;
+    font-size: 12px;
+    word-wrap: break-word;
+    white-space: normal;
   }
   .card-number {
-    font-size: 10px;
-  }
-  .set-info img {
-    height: 28px;
+    font-size: 11px;
+    word-wrap: break-word;
+    white-space: normal;
   }
 }
+
